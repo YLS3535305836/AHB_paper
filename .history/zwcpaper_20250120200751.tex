@@ -1,0 +1,50 @@
+\documentclass{xdupgthesis}
+\usepackage{theorem}
+\usepackage{siunitx}
+\usepackage{amssymb}
+\usepackage{bbding} 
+\usepackage{graphicx}
+\usepackage{algorithm}
+\usepackage{tabularray}
+\usepackage{booktabs}
+\usepackage{subcaption}
+\usepackage{diagbox}
+\usepackage{makecell}
+\usepackage{titlesec}
+\usepackage{pifont} %使用打钩
+\usepackage{longtable} %显示长表格
+
+% 定义 mysubsubsection 标题格式
+% \titleformat{\subsubsection}[block]{\normalsize\normalsize}{(\arabic{subsubsection})}{0.5em}{}[]
+
+ 
+
+\usepackage[noEnd=false]{algpseudocodex}
+\input{config}
+
+\begin{document}
+
+% \include{chapters/cp1}
+% \include{chapters/cp2}
+% \include{chapters/cp3}
+\include{chapters/chapter3}
+\include{chapters/chapter4}
+% \include{chapters/cp4}
+% \include{chapters/cp5}
+% \include{chapters/cp6}
+
+
+\iffalse
+% xdus 已经实现下面文件的引用
+% 为了使语法提示正确工作，在这里引用但是不编译
+\include{chapters/abstract-cn}
+\include{chapters/abstract-en}
+\include{chapters/los}
+\include{chapters/loa}
+\include{chapters/resume}
+\include{chapters/thanks}
+\bibliography{chapters/references}
+\fi
+
+
+\end{document}
