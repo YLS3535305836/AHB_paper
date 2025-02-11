@@ -15,7 +15,7 @@
 \subsection{CCM连续导通模式}
 对于非对称半桥反激式开关电源变换器而言，不同于传统的反激式开关电源变换器，连续导通模式是指，当系统给出功率开关管的下一周期导通信号时，变压器原边电感电流和励磁电感电流未重合，变压器励磁电感中的能量还没有完全退磁转移到次级侧负载，紧接着又从输入端开始继续获取能量。
 
-非对称半桥反激式开关电源变换器在连续导通模式下的波形如下图所示，tHSon是高边功率管HS的导通时间，tLSon是低边功率管LS的导通时间，Vhb是高低边功率管的中间节点电压，VCr是初级侧谐振电容的两端电压差，Ihb是初级侧电感电流，ILm是励磁电感电流，Isec是次级侧电感电流。
+非对称半桥反激式开关电源变换器在连续导通模式下的波形如下图所示，tHSon是高边功率管HS的导通时间，tLSon是低边功率管LS的导通时间，$V_{HB}$是高低边功率管的中间节点电压，VCr是初级侧谐振电容的两端电压差，Ihb是初级侧电感电流，ILm是励磁电感电流，Isec是次级侧电感电流。
 
 当高边功率管导通时，输入电压的能量在变压器励磁电感和谐振电容中积累，当高边功率管关断时，励磁电感和谐振电容中的能量经由副边绕组传递到输出端。当下一周期高边功率管导通再次开始励磁时，变压器励磁电感和谐振电容中储存的能量还未完全退磁传递到副边绕组的工作模式就是CCM模式。
 
@@ -56,50 +56,157 @@
 
 \section{工作原理}
 
-针对\eqref{subsec:MR-PPFN Adaptive Feature Fusion Network Design Problem Analysis}提出的问题，本小节提出一种自适应特征融合网络，结构如图\eqref{fig:Adaptive Fusion NetWork}所示，网络的输入分别是点云特征$P$和目标特征$T$，为了方便融合这两种特征，首先分别通过线性层进行将特征映射到相同的维度，而且为了适应不同点云子网络学习的点云特征的差异性，采取拼接、乘性、注意力三种融合方式进行加权融合，并且加权的参数是可学习的，从而可以更加有效地融合MR-PPFN并行网络学习到的点云与目标点特征。 
+非对称半桥反激式开关电源变换器的拓扑结构如图~\ref{fig:AHB简化拓扑图}所示。该图中$V_{in}$为直流输入电压；$Q_1$和$Q_2$分别为变换器系统中半桥结构的高低边功率管，栅极驱动信号是占空比为D和1-D的互补信号；每个功率管包含一个体二极管和寄生电容；$C_r$为谐振电容，在低边功率管$Q_2$导通时近似为一个恒定的直流源；变压器原边由变压器励磁电感$L_m$和变压器漏感$L_r$串联组成，原边匝数为$N_P$，变压器副边电感匝数为$N_S$，原边副边的匝数比为N；输出端D为副边整流二极管，$C_o$为输出滤波器，R为输出负载电阻。
 
-在三种融合策略中，注意力机制是通过计算输入特征之间的相关性来动态地调整特征的重要程度，突出关键特征，抑制不相关或冗余的信息。在特征融合中，注意力机制可以帮助模型专注于输入特征中最有用的部分，从而提高特征表示的质量。
-而特征连接是通过将不同来源的特征直接拼接在一起，从而保留了所有输入特征的信息。这种方法简单且有效，可以为后续的网络层提供丰富的特征信息。
-乘性融合是通过逐元素地相乘两个特征，强调它们之间的交互关系，这种方法可以捕捉到特征之间的非线性关系。
+\begin{figure}[htbp] 
+    \centering
+    \includegraphics[width=0.6\linewidth]{figures/AHB简化拓扑图.pdf}
+    \caption{AHB简化拓扑图}
+    \label{fig:AHB简化拓扑图}
+\end{figure}
 
-假设输入的点云特征向量为 \( P \in \mathbb{R}^{n \times d_p} \)，目标特征向量为 \( T \in \mathbb{R}^{n \times d_t} \)。
-首先，将点云特征和目标特征投影到一个共同的特征空间：
+\begin{figure}[htbp] 
+    \centering
+    \includegraphics[width=0.6\linewidth]{figures/BCM工作波形图.pdf}
+    \caption{AHBF BCM工作波形图}
+    \label{fig:BCM工作波形图}
+\end{figure}
+								
+非对称半桥反激变换器工作在临界导通模式时的主要工作波形如图~\ref{fig:BCM工作波形图}所示。图中从上到下分别是高低边功率管$Q_1$和$Q_2$的电压驱动波形HS和LS、辅助绕组电压分压ZCD引脚电压$V_{ZCD}$的波形、变压器原边励磁电感电流$I_{LM}$和原边电感电流$I_{HB}$的波形、变压器副边电感电流$I_{sec}$的波形，高低边功率管半桥节点电压$V_{HB}$的波形。该控制模式下共分为5个阶段。
+						
+
+
+\begin{figure}[htbp] 
+    \centering
+    \includegraphics[width=0.6\linewidth]{figures/工作原理1.pdf}
+    \caption{阶段1 ($t_0 \thicksim t_1$)}
+    \label{fig:工作原理1}
+\end{figure}
+                
+阶段1，$t_0 \thicksim t_1$：此阶段在$t_0$时刻高边功率管$Q_1$完全导通，低边功率管$Q_2$保持关断状态，如图~\ref{fig:工作原理1}所示。半桥节点电压$V_{HB}$等于输入电压$V_{in}$，原边电感电流$I_{HB}$正向流动，输入电压$V_{in}$对原边励磁电感$L_m$、变压器漏感$L_r$和谐振电容$C_r$进行充电，此时原边励磁电感$L_m$、变压器漏感$L_r$和谐振电容$C_r$共同构成谐振回路，由于谐振周期很大，远远大于一个开关周期，其谐振作用在一个开关周期中并不十分明显，因而电感电流近似线性增加。谐振电容$C_r$上的能量持续增加，变压器原边电感电压上正下负，由于变压器的反向作用，副边电感电压上负下正，副边二极管D反向偏置，阻止副边电流$I_{sec}$的产生，输出负载由输出电容提供能量。
+
+在该阶段内，根据回路电压为零和节点电流为零公式，可建立如下方程：
+
 \begin{equation}
-    P' = W_p P + b_p
+    \label{eq:回路电压公式}
+    (L_m + L_r)\frac{di_r}{dt} = V_{in} - V_{Cr}  
+\end{equation}
+
+\begin{equation}
+    \label{eq:结点电流公式}
+    V_{Cr}\frac{dV_{Cr}}{dt} = i_r 
+\end{equation}
+
+由式\eqref{eq:回路电压公式}和\eqref{eq:结点电流公式}可计算得下式：
+
+\begin{equation}
+    \label{eq:Ihb公式1}
+    i_{hb}(t) = i_{Lm}(t) = \frac{V_{a}-V_{Cr}(t)}{Z_o}\sin[\omega_o(t-t_0)] + I_{hbneg}\cos[\omega_o(t-t_0)]  
+\end{equation}
+
+\begin{equation}
+    \label{eq:Vcr公式}
+    V_{Cr}(t) =V_{a}-[V_{a}-V_{Cr}(t_0)]\cos[\omega_o(t-t_0)] + {Z_o} I_{hbneg} \sin[\omega_o(t-t_0)]
+\end{equation}
+其中，特征阻抗值的公式为：
+\begin{equation}
+    \label{eq:Zo公式}
+    Z_o=\sqrt{\frac{L_m+L_r}{C_r}}  
+\end{equation}
+谐振角频率的公式为：
+\begin{equation}
+    \label{eq:omega_o公式}
+    \omega_o=\frac{1}{\sqrt{C_r(L_m+L_r)}}
+\end{equation}
+$V_{a}$的公式为：
+\begin{equation}
+    \label{eq:Vhb公式1}
+    V_{a}=V_{in}
+\end{equation}
+
+由于谐振角频率$\omega_o$很大，原边电感电流和励磁电流可近似表示为式\eqref{eq:Ihb公式2}：
+
+\begin{equation}
+    \label{eq:Ihb公式2}
+    i_{hb}(t) = i_{Lm}(t) = I_{hbneg} + \frac{V_{in}-V_{Cr}(t)}{L_m + L_r}(t-t_0)
+\end{equation}
+
+
+\begin{figure}[htbp] 
+    \centering
+    \includegraphics[width=0.6\linewidth]{figures/工作原理2.pdf}
+    \caption{阶段2 ($t_1 \thicksim t_2$)}
+    \label{fig:工作原理2}
+\end{figure}
+                
+阶段2，$t_1 \thicksim t_2$：此阶段在$t_1$时刻关断高边功率管$Q_1$，同时低边功率管$Q_2$仍保持关断状态，如~\ref{fig:工作原理1}所示，进入功率管死区时间，断开充电路径与 $V_{in}$ 的连接。由于电感电流不能突变，原边电感电流持续正向流动并逐渐减小，对低边功率管$Q_2$的寄生电容进行放电，迫使半桥节点电压$V_{HB}$下降，直到$t_2$时刻低边功率管$Q_2$的体二极管开始导通，$V_{HB}$电压近似为0，为低边功率管的ZVS导通提供准备，此时变压器原边电感两端压降与电容器$C_r$的电压保持一致。输出负载仍由输出电容提供能量。此阶段由于副边二极管仍未被正向偏置，谐振回路未发生变化，特征阻抗值和谐振频率未变仍如式\eqref{eq:Zo公式}和式\eqref{eq:omega_o公式}，故原边电感电流和励磁电流仍然相等，但由于$V_{HB}$的近似为0，重新带入式\eqref{eq:Ihb公式1}和式\eqref{eq:Vcr公式}中可将原边电感电流和励磁电感电流公式可近似为式\eqref{eq:Ihb公式3}：
+
+\begin{equation}
+    \label{eq:Ihb公式3}
+    i_{hb}(t) = i_{Lm}(t) = I_{hbpos} - \frac{N_P}{N_S} \frac{V_o}{L_m + L_r}(t-t_1)
+\end{equation}
+
+                
+\begin{figure}[htbp] 
+    \centering
+    \includegraphics[width=0.6\linewidth]{figures/工作原理3.pdf}
+    \caption{阶段3 ($t_2 \thicksim t_3$)}
+    \label{fig:工作原理3}
+\end{figure}
+
+阶段3，$t_2 \thicksim t_3$：此阶段在t2时刻低边功率管$Q_2$在栅极信号的驱动下顺利在ZVS条件下实现导通，极大地降低了开关损耗，高边功率管$Q_1$仍保持关断状态，如~\ref{fig:工作原理3}所示。功率管中间半桥节点电压$V_{HB}$为零，变压器原边电感极性发生变化，电感电压变为上负下正，经变压器反向后副边电感电压上正下负，副边电感电压等于谐振电容两端电压$V_{Cr}$除以变压器匝数比N，副边二极管D正向偏置自然导通，同时原边励磁电感被输出电压箝位，励磁电感电压的公式为：$V_{Lm}=NV_o$，$L_m$不再参与谐振，谐振电容$C_r$只与变压器的漏感$L_r$发生串联谐振，由于变压器漏感$L_r$和谐振电容$C_r$的谐振周期较小，小于开关周期，可见图中初级侧电感电流呈谐振式持续减小直至正向电流为零。存储在励磁电感中的电能开始通过变压器向副边转移，副边电感电流$I_{sec}$开始逐渐增大。因为副边电流的存在，原边电感电流和励磁电流不再相等，原边电感电流和励磁电感电流的公式分别可表示为式\eqref{eq:Ihb公式4}和\eqref{eq:Ihb公式5}：
+
+\begin{equation}
+    \label{eq:Ihb公式4}
+    i_{hb}(t) = \frac{\frac{N_P}{N_S}V_o - V_{Cr}(t)}{Z_r}\sin[\omega_o(t-t_2)] + i_{hb}(t_2) \cos[\omega_o(t-t_2)]  
+\end{equation}
+
+\begin{equation}
+    \label{eq:Ihb公式5}
+    i_{Lm}(t) = i_{hb}(t_2) - \frac{N_P}{N_S} \frac{V_o}{L_m}(t-t_2)
+\end{equation}
+其中，特征阻抗值的公式为：
+\begin{equation}
+    \label{eq:Zr公式}
+    Z_r=\sqrt{\frac{L_r}{C_r}}  
+\end{equation}
+谐振角频率的公式为：
+\begin{equation}
+    \label{eq:omega_r公式}
+    \omega_o=\frac{1}{\sqrt{C_r L_r}}
+\end{equation}
+由于励磁电感电流等于原边电感电流和经变压器反射后的副边电流之和，如式\eqref{eq:Ihb公式6}所示，将式\eqref{eq:Ihb公式4}和\eqref{eq:Ihb公式5}带入其中可求得副边电流公式\eqref{eq:Isec公式1}：
+\begin{equation}
+    \label{eq:Ihb公式6}
+    I_{Lm} = I_{HB} + \frac{N_P}{N_S}I_{sec}
 \end{equation}
 \begin{equation}
-    T' = W_t T + b_t
+    \label{eq:Isec公式1}
+    i_{sec}(t) 
+    %&= \frac{N_P}{N_S}[i_{Lm}(t) - i_{hb}(t)] \\ &
+    = \frac{N_P}{N_S} i_{hb}(t_2) \{  1 - \cos[\omega_r(t-t_2)]\}  - \frac{N_P^2}{N_N^2} \frac{V_o}{L_m} (t-t_2)
+    - \frac{\frac{N_P^2}{N_S^2} V_o - V_{Cr}}{Z_r} \sin[\omega_r(t-t_2)]
 \end{equation}
-其中，\( W_p \in \mathbb{R}^{d_f \times d_p} \) 和 \( W_t \in \mathbb{R}^{d_f \times d_t} \) 是投影矩阵，\( b_p \in \mathbb{R}^{d_f} \) 和 \( b_t \in \mathbb{R}^{d_f} \) 是偏置向量。
-
-其次是通过公式\eqref{eq:attention}计算注意力权重，其中的\( W_q, W_k \in \mathbb{R}^{d_f \times d_f} \) 是注意力机制的权重矩阵。
-\begin{equation}
-    \label{eq:attention}
-    A = \text{softmax}\left(\frac{(P' W_q) (T' W_k)^T}{\sqrt{d_f}}\right)
-\end{equation}
-
-紧接着结合拼接、乘性、注意力三种融合策略：
-\begin{align}
-    F_{\text{attention}} &= A (T' W_v) \\
-    F_{\text{concat}} &= \text{ReLU}(W_c [P'; T']) \\
-    F_{\text{mul}} &= \text{ReLU}(P' \odot T')
-\end{align}
-其中，\( W_v \in \mathbb{R}^{d_f \times d_f} \) 是用于计算输出特征的权重矩阵，\( W_c \) 是用于连接特征的权重矩阵。
-
-最后通过可学习的权重进 \(\alpha, \beta, \gamma\)行加权求和，如公式\eqref{eq:calculate fusion feature}所示，并且权重参数之间满足 \(\alpha + \beta + \gamma = 1\)，得到最终的融合特征$F$。
-\begin{equation}
-    \label{eq:calculate fusion feature}
-    F = \alpha F_{\text{attention}} + \beta F_{\text{concat}} + \gamma F_{\text{mul}}
-\end{equation}
+随着副边电流的逐渐增大，原边电感电流在$t_3$时刻正向降低为零，该阶段结束。
 
 
 
 \begin{figure}[htbp] 
     \centering
-    \includegraphics[width=0.8\linewidth]{imgs/Adaptive Fusion NetWork.pdf}
-    \caption{自适应特征融合网络}
-    \label{fig:Adaptive Fusion NetWork}
+    \includegraphics[width=0.6\linewidth]{figures/工作原理4.pdf}
+    \caption{阶段4 ($t_3 \thicksim t_4$)}
+    \label{fig:工作原理4}
 \end{figure}
+
+阶段4，$t_3 \thicksim t_4$：此阶段高低边功率管$Q_1$和$Q_2$仍保持上一阶段状态，在$t_3$时刻原边电感电流正向降低为零，开始负向流动并持续增大，如~\ref{fig:工作原理4}所示。此时谐振电容$C_r$和励磁电感$L_m$共同为副边提供能量。同时，励磁电感电流也逐渐降低至与原边电感电流相等的值，如~\ref{fig:BCM工作波形图}中$t_4$时刻所示，此时励磁电感能量全部退磁完成，不再为副边提供能量，副边电感电流$I_{sec}$降低为零，辅助绕组电感电压分压$V_{ZCD}$波形上出现高频谐振，这是因为副边二极管寄生电容和变压器漏感发生的谐振现象，这一反映励磁电感退磁完成的高频谐振波形可以作为判断低边功率管关断的关键信号，故在$t_4$时刻低边功率管在栅极信号驱动下开始关断。
+
+
+                
+阶段5，$t_4 \thicksim t_5$：此阶段高低边功率管都保持关断状态，再次进入功率管的死区时间，由于电感电流无法进行突变，电感电流仍负向流动，对低边功率管$Q_2$寄生电容进行充能，逐渐拉高半桥节点电压$V_{HB}$，一旦半桥节点电压$V_{HB}$被高边功率管$Q_1$中的体二极管钳位，就达到开启高边功率管$Q_1$的ZVS条件进入下一阶段。
+
+								
+%阶段1，$t_0$-$t_1$：此阶段在$t_0$时刻高边功率管$Q_1$完全导通，低边功率管$Q_2$保持关断状态，进入功率%管死区时间。
+
 
 \section{开关电源的脉宽调制方式}
 开关电源通过调节开关管控制信号的导通关断时间来改变信号占空比由此达到稳定输出电压或输出电流的目的，根据改变占空比方式的不同将会得到不同的开关电源调制方式，本节将分别介绍脉冲宽度调制(PWM)、脉冲频率调制(PFM)、脉冲跳周期调制(PSM)以及脉冲宽度频率调制(PWM-PFM)。
