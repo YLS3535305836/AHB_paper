@@ -111,7 +111,7 @@
 
 \subsection{变压器的损耗}
 
-在开关电源系统中，变压器是用于实现电压转换、原副边电气隔离和能量传递的关键元件，其上产生的损耗也极大的影响了系统的转换效率。比哪呀的损耗主要包括磁芯损耗（铁损）、绕组损耗（铜损）和漏感损耗等部分。
+在开关电源系统中，变压器是用于实现电压转换、原副边电气隔离和能量传递的关键元件，其上产生的损耗也极大的影响了系统的转换效率。变压器的损耗主要包括磁芯损耗（铁损）、绕组损耗（铜损）和漏感损耗等部分。
 
 铁损是由于交变磁场在磁性材料中产生的能量损耗，包括磁芯材料在反复的励磁和退磁过程中都需要克服内部阻力产生的损耗和磁场在磁芯中感应出的涡流通过磁芯电阻产生的损耗。通过斯坦梅茨的铁损模型，铁损的表达式可简化为：
 \begin{equation}
@@ -126,6 +126,13 @@
     P_{copper} = I_{rms}^2  \cdot R_{DC} 
 \end{equation}
 其中$I_{rms}$是流经变压器电流的有效值，$R_{DC}$是变压器线圈的阻抗。
+
+变压器的漏感损耗，指的是由于原边电流对漏感储存的能量无法传递到变压器副边，该部分能量通过功率管或吸收电路被消耗掉产生的损耗，漏感损耗的公式可表达为：
+\begin{equation}
+    \label{eq:漏感损耗公式}
+    P_{lk} = \frac{1}{2}\cdot I_{pri,peak}^2  \cdot f_{sw} 
+\end{equation}
+其中$I_{pri,peak}$指的是变压原边电感的峰值电流。
 
 \subsection{电流采样电阻损耗}
 
@@ -157,37 +164,13 @@
 
 从上问描述的各种损耗的原理可以看出，大部份都与反激式变换器系统的工作电流和开关频率有密切关系，由于反激式变换器一般通过采样原边的电流采样电阻来检测系统的工作电流的大小，因此可以看成这些损耗与系统的原边电感峰值电流相关。由此可以得出，影响系统损耗的两个关键因素为原边的峰值电流和系统的开关频率。
 
-\section{恒流恒压环路设计}
-\subsection{恒流环路设计}
-
-下面分析输出电流和原边电感电流之间的关系，每个半桥开关周期的输入功率取决于谐振电容Cr上的平均电压$V_{cr\_avg}$，该电压在高边功率管HS导通期间由原边电感电流$I_{HB}$充电。输入功率和输出功率的表达式分别如式\eqref{eq:Pin_1}和\eqref{eq:Pout_1} ：
-\begin{equation}
-    \label{eq:Pin_1}
-    P_{in}=\frac{1}{2} \times V_{cr\_avg} \times (I_{hbpos}+I_{hbneg})
-\end{equation}
-\begin{equation}
-    \label{eq:Pout_1}
-    P_{out}=V_o + I_o
-\end{equation}
-
-其中$I_{hbpos}$和$I_{hbneg}$分别是变压器原边电感电流的正向电流峰值和负向电流峰值。
-假设变压器原边和副边线圈的能量在理想情况下完全传递即$P_{in}=P_{out}$，由式\eqref{eq:Vcr_1}、\eqref{eq:Pin_1}和\eqref{eq:Pout_1}可以得到输出电流的表达式，如式\eqref{eq:Io_1}所示：
-\begin{equation}
-    \label{eq:Io_1}
-    I_o=\frac{N}{2}\times(I_{hbpos}+I_{hbneg})
-\end{equation}
-
-根据式\eqref{eq:Io_1}可知输出电流完全取决于原边励磁电感中的正负峰值电流。因此，只需要确定了原边励磁电感中的正负峰值电流即可恒定的向输出电容
-
-\subsection{恒压环路设计}
-
 \section{多模式切换}
 
 根据对上文对反激式变换器系统的各种损耗分析可知，为了实现在不同输出电压下和不同输出负载情况下降低系统的损耗，提高系统整体的传递效率，需要根据负载和输出电压的大小自动地调节系统的开关频率和峰值电流。根据文献的研究，反激式变换器系统在重载情况下主导损耗是功率管导通损耗，在轻载条件下主导损耗是功率管开关损耗，因此为了实现全负载范围下的低损耗高效率，需在重载情况时使用CRM模式降低导通损耗，在轻载情况时使用RVS模式降低开关损耗，在空载时使用突发模式实现最小的待机功耗。除此以外，考虑到宽输出范围的影响，不同模式的切换也要受到输出电压的影响。
 
 \begin{figure}[htbp] 
     \centering
-    \includegraphics[width=0.6\linewidth]{figures/模式切换1.pdf}
+    \includegraphics[width=0.8\linewidth]{figures/模式切换1.pdf}
     \caption{多模式切换图}
     \label{fig:模式切换1}
 \end{figure}
@@ -196,7 +179,7 @@
 
 \begin{figure}[htbp] 
     \centering
-    \includegraphics[width=0.6\linewidth]{figures/模式切换2.pdf}
+    \includegraphics[width=0.8\linewidth]{figures/模式切换2.pdf}
     \caption{多模式频率变化图}
     \label{fig:模式切换2}
 \end{figure}
@@ -224,6 +207,48 @@ RVS工作模式是针对非对称半桥反激式开关电源设计的一种新�
 
 此控制方式巧妙地在开启高边功率管前，提前打开底边功率管一定时间，产生逆向的电感电流为$V_{HB}$节点进行充电，合理规划死区时间即可将$V_{HB}$节点电压充电到等于$V_{in}$，此时再打开高边功率管对变压器原边电感进行励磁储能，极大的降低开关损耗和能量传递效率，具体波形图如图~\ref{fig:RVS波形图}所示。同时考虑到等待时间内$V_{HB}$的谐振情况，通过精确谷底导通模块控制低边功率管在$V_{HB}$电压谐振谷底处导通，抑制低边功率管引入的不必要的开关损耗。
 
+\section{恒流恒压控制模式设计}
+反激式变换器系统的控制模式主要分为恒流模式（CC）和恒压模式（CV）。当输出电压还升高到额定电压时，此时变换器芯片工作在恒流模式，输出端以恒定的输出电流为输出电容和输出负载充电，直至输出电压达到额定电压转为恒压模式，维持输出电压的稳定。
+\subsection{恒流控制模式}
+
+下面分析输出电流和原边电感电流之间的关系，每个半桥开关周期的输入功率取决于谐振电容Cr上的平均电压$V_{cr\_avg}$，该电压在高边功率管HS导通期间由原边电感电流$I_{HB}$充电。输入功率和输出功率的表达式分别如式\eqref{eq:Pin_1}和\eqref{eq:Pout_1} ：
+\begin{equation}
+    \label{eq:Pin_1}
+    P_{in}=\frac{1}{2} \cdot V_{cr\_avg} \cdot (I_{hbpos}+I_{hbneg})
+\end{equation}
+\begin{equation}
+    \label{eq:Pout_1}
+    P_{out}=V_o + I_o
+\end{equation}
+其中$I_{hbpos}$和$I_{hbneg}$分别是变压器原边电感电流的正向电流峰值和负向电流峰值。
+
+假设变压器原边和副边线圈的能量在理想情况下完全传递即$P_{in}=P_{out}$，由式\eqref{eq:Vcr_1}、\eqref{eq:Pin_1}和\eqref{eq:Pout_1}可以得到输出电流的表达式，如式\eqref{eq:Io_1}所示：
+\begin{equation}
+    \label{eq:Io_1}
+    I_o=\frac{N}{2}\times(I_{hbpos} \cdot I_{hbneg})
+\end{equation}
+
+根据式\eqref{eq:Io_1}可知输出电流完全取决于原边励磁电感中的正负峰值电流。因此，只需要确定了原边励磁电感中的正负峰值电流即可恒定的向输出电容
+
+\subsection{恒压控制模式}
+
+当输出电压达到电路设计的额定电压时，变换器芯片的控制模式由恒流模式转换为恒压模式，控制输出电压稳定在额定电压附近。反激式变换器的输入功率和输出功率的公式还可表达为：
+\begin{equation}
+    \label{eq:Pin_2}
+    P_{in} = \frac{E_P}{T}=\frac{1}{2} \cdot L_m \cdot I_{hbpos} \cdot \frac{1}{T}
+\end{equation}
+\begin{equation}
+    \label{eq:Pout_2}
+    P_{out} = \frac{V_o^2}{R_L} 
+\end{equation}
+其中，$E_P$是励磁电感的励磁能量，$T$是开关周期时间，$R_L$是输出负载电阻。
+
+同样假设输入功率等于输出功率，忽略变压器的损耗，由式\eqref{eq:Pin_2}和\eqref{eq:Pout_2}可以得到输出电压的表达式，如式\eqref{eq:Vo_1}所示：
+\begin{equation}
+    \label{eq:Vo_1}
+    V_o = I_{hbpos} \cdot \sqrt{\frac{L_m R_L}{2T}}
+\end{equation}
+由该式可见得，当输出负载电阻发生变化，而原边电感峰值电流和开关周期未发生时，输出电压会随着负载电阻的变化而变化。输出电压变化后，经过分压电阻分压后输入副边反馈环路中，通过TL431和光耦模块产生电压$V_{FB}$通过副边反馈引脚$FB$输入芯片内，控制系统在不同工作模式下的峰值电流和开关频率大小。在RVS工作模式时，保持峰值电流的相对稳定，通过改变开关频率的大小逐渐调节输出电压恢复其额定电压；在CRM工作模式时，保持开关频率的恒定，通过逐渐改变峰值电流的大小维持输出电压的恒压控制。
 
 
 \section{关键技术}
