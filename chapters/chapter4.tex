@@ -218,17 +218,17 @@ RVS工作模式是针对非对称半桥反激式开关电源设计的一种新�
 \end{equation}
 \begin{equation}
     \label{eq:Pout_1}
-    P_{out}=V_o + I_o
+    P_{out}=V_o \cdot I_o
 \end{equation}
 其中$I_{hbpos}$和$I_{hbneg}$分别是变压器原边电感电流的正向电流峰值和负向电流峰值。
 
 假设变压器原边和副边线圈的能量在理想情况下完全传递即$P_{in}=P_{out}$，由式\eqref{eq:Vcr_1}、\eqref{eq:Pin_1}和\eqref{eq:Pout_1}可以得到输出电流的表达式，如式\eqref{eq:Io_1}所示：
 \begin{equation}
     \label{eq:Io_1}
-    I_o=\frac{N}{2}\times(I_{hbpos} \cdot I_{hbneg})
+    I_o=\frac{N}{2}\cdot(I_{hbpos} + I_{hbneg})
 \end{equation}
 
-根据式\eqref{eq:Io_1}可知输出电流完全取决于原边励磁电感中的正负峰值电流。因此，只需要确定了原边励磁电感中的正负峰值电流即可恒定的向输出电容
+根据式\eqref{eq:Io_1}可知输出电流完全取决于原边励磁电感中的正负峰值电流。因此，只需要确定了原边励磁电感中的正负峰值电流即可实现恒定的输出电流。
 
 \subsection{恒压控制模式}
 
