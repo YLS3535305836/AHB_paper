@@ -100,7 +100,7 @@ $I_s$是PN结饱和电流，公式为：
 
 \begin{figure}[htbp] 
     \centering
-    \includegraphics[width=0.8\linewidth]{figures/峰值检测电路图.pdf}
+    \includegraphics[width=1.0\linewidth]{figures/峰值检测电路图.pdf}
     \caption{峰值检测电路图}
     \label{fig:峰值检测电路图}
 \end{figure}
@@ -135,7 +135,10 @@ $I_s$是PN结饱和电流，公式为：
     \includegraphics[width=0.8\linewidth]{figures/鉴相鉴频器波形图.pdf}
     \caption{鉴相鉴频器电荷泵波形图}
     \label{fig:鉴相鉴频器波形图}
-\end{figure}
+\end{figure} 
+
+其中，电荷泵的实际电路图如图~\ref{fig:电荷泵电路图}所示。
+
 
 %通过逻辑控制电路得到LS和PLS信号的延时时间Pre\_Pulse。为了预判谷底信号，通过一个使用MOS管充当电阻的压控高通滤波器电路，产生$V_{ZCD}$对应的超前时间信号VHP\_ZCD，只需适当的调节VGS的大小即可控制VHP\_ZCD信号的超前时间大小。分别使用两个峰值检测电路来检测并得到两个信号的峰值脉冲信号，经过SR锁存器产生超前时间Deta\_Pulse。为了轻微的调节栅极电压信号VGS，使用了PLL电路中的鉴相鉴频器和电荷泵电路来控制Deta\_Pulse信号逐步逼近Pre\_Pulse信号，完成低边功率管的精确谷底导通功能。
 
