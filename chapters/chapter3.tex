@@ -37,30 +37,31 @@ AHB反激式变换器拓扑结构电路如图~\ref{fig:AHB拓扑图}所示。该
 
 
 \section{工作原理}
+\label{sec:工作原理}
 
 非对称半桥反激式开关电源变换器的简化拓扑结构如图~\ref{fig:AHB简化拓扑图}所示。该图中$V_{in}$为直流输入电压；变换器系统中的高低边功率管$Q_1$和$Q_2$的栅极驱动信号分别为占空比为D的HSGD和占空比为1-D的LSGD。每个功率管都包含一个体二极管和寄生电容。谐振电容$C_r$在低边功率管$Q_2$导通时近似为一个恒定的直流源；变压器原边线圈匝数为$N_P$，副边线圈匝数为$N_S$，原边和副边的匝数比为N。输出端D为副边续流二极管，$C_o$为输出滤波电容，R为输出负载电阻。
 
 \begin{figure}[htbp] 
     \centering
-    \includegraphics[width=0.6\linewidth]{figures/AHB简化拓扑图.pdf}
+    \includegraphics[width=0.8\linewidth]{figures/AHB简化拓扑图.pdf}
     \caption{AHB简化拓扑图}
     \label{fig:AHB简化拓扑图}
 \end{figure}
 
 \begin{figure}[htbp] 
     \centering
-    \includegraphics[width=0.6\linewidth]{figures/BCM工作波形图.pdf}
-    \caption{AHBF BCM工作波形图}
-    \label{fig:BCM工作波形图}
+    \includegraphics[width=0.8\linewidth]{figures/BCM工作波形图.pdf}
+    \caption{AHBF CRM工作模式波形图}
+    \label{fig:CRM模式波形图}
 \end{figure}
 								
-非对称半桥反激变换器工作在临界导通模式时的主要工作波形如图~\ref{fig:BCM工作波形图}所示。图中从上到下分别是高低边功率管$Q_1$和$Q_2$的电压驱动波形HS和LS、辅助绕组电压分压ZCD引脚电压$V_{ZCD}$的波形、变压器原边励磁电感电流$I_{LM}$和原边电感电流$I_{HB}$的波形、变压器副边电感电流$I_{sec}$的波形，高低边功率管半桥节点电压$V_{HB}$的波形。该控制模式下共分为5个阶段。
+非对称半桥反激变换器工作在临界导通模式时的主要工作波形如图~\ref{fig:CRM工作模式波形图}所示。图中从上到下分别是高低边功率管$Q_1$和$Q_2$的电压驱动波形HS和LS、辅助绕组电压分压ZCD引脚电压$V_{ZCD}$的波形、变压器原边励磁电感电流$I_{LM}$和原边电感电流$I_{HB}$的波形、变压器副边电感电流$I_{sec}$的波形，高低边功率管半桥节点电压$V_{HB}$的波形。该控制模式下共分为5个阶段。
 						
 
 
 \begin{figure}[htbp] 
     \centering
-    \includegraphics[width=0.6\linewidth]{figures/工作原理1.pdf}
+    \includegraphics[width=0.8\linewidth]{figures/工作原理1.pdf}
     \caption{阶段1 ($t_0 \thicksim t_1$)}
     \label{fig:工作原理1}
 \end{figure}
@@ -111,12 +112,12 @@ $V_{a}$的公式为：
 
 \begin{figure}[htbp] 
     \centering
-    \includegraphics[width=0.6\linewidth]{figures/工作原理2.pdf}
+    \includegraphics[width=0.8\linewidth]{figures/工作原理2.pdf}
     \caption{阶段2 ($t_1 \thicksim t_2$)}
     \label{fig:工作原理2}
 \end{figure}
                 
-阶段2，$t_1 \thicksim t_2$：此阶段在$t_1$时刻关断高边功率管$Q_1$，同时低边功率管$Q_2$仍保持关断状态，如~\ref{fig:工作原理1}所示，进入功率管死区时间，断开充电路径与 $V_{in}$ 的连接。由于电感电流不能突变，原边电感电流持续正向流动并逐渐减小，对低边功率管$Q_2$的寄生电容进行放电，迫使半桥节点电压$V_{HB}$下降，直到$t_2$时刻低边功率管$Q_2$的体二极管开始导通，$V_{HB}$电压近似为0，为低边功率管的ZVS导通提供准备，此时变压器原边电感两端压降与电容器$C_r$的电压保持一致。输出负载仍由输出电容提供能量。此阶段由于副边二极管仍未被正向偏置，谐振回路未发生变化，特征阻抗值和谐振频率未变仍如式\eqref{eq:Zo公式}和式\eqref{eq:omega_o公式}，故原边电感电流和励磁电流仍然相等，但由于$V_{HB}$的近似为0，重新带入式\eqref{eq:Ihb公式1}和式\eqref{eq:Vcr公式}中可将原边电感电流和励磁电感电流公式可近似为式\eqref{eq:Ihb公式3}：
+阶段2，$t_1 \thicksim t_2$：此阶段在$t_1$时刻关断高边功率管$Q_1$，同时低边功率管$Q_2$仍保持关断状态，如~\ref{fig:工作原理1}所示，进入功率管死区时间，断开充电路径与 $V_{in}$ 的连接。由于电感电流不能突变，原边电感电流持续正向流动并逐渐减小，对低边功率管$Q_2$的寄生电容进行放电，迫使半桥节点电压$V_{HB}$下降，直到$t_2$时刻低边功率管$Q_2$的体二极管开始导通，$V_{HB}$电压近似为0，为低边功率管的ZVS导通提供准备，此时变压器原边电感两端压降与电容器$C_r$的电压保持一致。输出负载仍由输出电容提供能量。此阶段由于副边二极管仍未被正向偏置，谐振回路未发生变化，特征阻抗值和谐振频率未变仍如式\eqref{eq:Zo公式}和式\eqref{eq:omega_o公式}，故原边电感电流和励磁电流仍然相等，但由于$V_{HB}$的近似为0，重新带入式\eqref{eq:Ihb公式1}和式\eqref{eq:Vcr_2}中可将原边电感电流和励磁电感电流公式可近似为式\eqref{eq:Ihb公式3}：
 \begin{equation}
     \label{eq:Ihb公式3}
     i_{hb}(t) = i_{Lm}(t) = I_{hbpos} - \frac{N_P}{N_S} \frac{V_o}{L_m + L_r}(t-t_1)
@@ -125,7 +126,7 @@ $V_{a}$的公式为：
                 
 \begin{figure}[htbp] 
     \centering
-    \includegraphics[width=0.6\linewidth]{figures/工作原理3.pdf}
+    \includegraphics[width=0.8\linewidth]{figures/工作原理3.pdf}
     \caption{阶段3 ($t_2 \thicksim t_3$)}
     \label{fig:工作原理3}
 \end{figure}
@@ -167,16 +168,16 @@ $V_{a}$的公式为：
 
 \begin{figure}[htbp] 
     \centering
-    \includegraphics[width=0.6\linewidth]{figures/工作原理4.pdf}
+    \includegraphics[width=0.8\linewidth]{figures/工作原理4.pdf}
     \caption{阶段4 ($t_3 \thicksim t_4$)}
     \label{fig:工作原理4}
 \end{figure}
 
-阶段4，$t_3 \thicksim t_4$：此阶段高低边功率管$Q_1$和$Q_2$仍保持上一阶段状态，在$t_3$时刻原边电感电流正向降低为零，开始负向流动并持续增大，如~\ref{fig:工作原理4}所示。此时谐振电容$C_r$和励磁电感$L_m$共同为副边提供能量。同时，励磁电感电流也逐渐降低至与原边电感电流相等的值，如~\ref{fig:BCM工作波形图}中$t_4$时刻所示，此时励磁电感能量全部退磁完成，不再为副边提供能量，副边电感电流$I_{sec}$降低为零，辅助绕组电感电压分压$V_{ZCD}$波形上出现高频谐振，这是因为副边二极管寄生电容和变压器漏感发生的谐振现象，这一反映励磁电感退磁完成的高频谐振波形可以作为判断低边功率管关断的关键信号，故在$t_4$时刻低边功率管在栅极信号驱动下开始关断。
+阶段4，$t_3 \thicksim t_4$：此阶段高低边功率管$Q_1$和$Q_2$仍保持上一阶段状态，在$t_3$时刻原边电感电流正向降低为零，开始负向流动并持续增大，如~\ref{fig:工作原理4}所示。此时谐振电容$C_r$和励磁电感$L_m$共同为副边提供能量。同时，励磁电感电流也逐渐降低至与原边电感电流相等的值，如~\ref{fig:CRM模式波形图}中$t_4$时刻所示，此时励磁电感能量全部退磁完成，不再为副边提供能量，副边电感电流$I_{sec}$降低为零，辅助绕组电感电压分压$V_{ZCD}$波形上出现高频谐振，这是因为副边二极管寄生电容和变压器漏感发生的谐振现象，这一反映励磁电感退磁完成的高频谐振波形可以作为判断低边功率管关断的关键信号，故在$t_4$时刻低边功率管在栅极信号驱动下开始关断。
 
 \begin{figure}[htbp] 
     \centering
-    \includegraphics[width=0.6\linewidth]{figures/工作原理5.pdf}
+    \includegraphics[width=0.8\linewidth]{figures/工作原理5.pdf}
     \caption{阶段5 ($t_3 \thicksim t_4$)}
     \label{fig:工作原理5}
 \end{figure}
@@ -190,13 +191,24 @@ $V_{a}$的公式为：
 
 \section{开关电源的工作模式}
 \label{sec:dataset-build}
+
+开关电源工作模式分为三种，包括连续导通模式(CCM)、边界导通模式(BCM)以及断续导通模式(DCM)，本文设计分别采用了断续导通模式(DCM)和边界导通模式(BCM)。以下是对三种工作模式的具体研究情况。
+
 \subsection{CCM连续导通模式}
 对于非对称半桥反激式开关电源变换器而言，不同于传统的反激式开关电源变换器，连续导通模式是指，当系统给出功率开关管的下一周期导通信号时，变压器原边电感电流和励磁电感电流未重合，变压器励磁电感中的能量还没有完全退磁转移到次级侧负载，紧接着又从输入端开始继续获取能量。
+
+\begin{figure}[htbp] 
+    \centering
+    \includegraphics[width=0.8\linewidth]{figures/CCM模式.pdf}
+    \caption{CCM工作模式波形图}
+    \label{fig:CCM工作模式波形图}
+\end{figure}
 
 非对称半桥反激式开关电源变换器在连续导通模式下的波形如下图所示，tHSon是高边功率管HS的导通时间，tLSon是低边功率管LS的导通时间，$V_{HB}$是高低边功率管的中间节点电压，VCr是初级侧谐振电容的两端电压差，Ihb是初级侧电感电流，ILm是励磁电感电流，Isec是次级侧电感电流。
 
 当高边功率管导通时，输入电压的能量在变压器励磁电感和谐振电容中积累，当高边功率管关断时，励磁电感和谐振电容中的能量经由副边绕组传递到输出端。当下一周期高边功率管导通再次开始励磁时，变压器励磁电感和谐振电容中储存的能量还未完全退磁传递到副边绕组的工作模式就是CCM模式。
 
+\iffalse
 在输入输出电压稳定运行期间，对励磁电感应用伏秒平衡原理，能够得到输入电压、输出电压和占空比D之间的关系。在tHSon内，励磁电感两端电压为输入电压减去谐振电容电压Vcr；在tLSon内，励磁电感两端电压为谐振电容电压Vcr，由此可得式\eqref{eq:CCM_1}：
 \begin{equation}
     \label{eq:CCM_1}
@@ -219,13 +231,35 @@ $V_{a}$的公式为：
     \label{eq:CCM_4}
     V_o=D \times \frac{V_{in}}{N}  
 \end{equation}
-
+\fi
 \subsection{DCM断续导通模式}
 
+\begin{figure}[htbp] 
+    \centering
+    \includegraphics[width=0.8\linewidth]{figures/DCM模式.pdf}
+    \caption{DCM工作模式波形图}
+    \label{fig:DCM工作模式波形图}
+\end{figure}
 
-
+开关电源工作在连续导电模式（CCM）下时，当开关管导通的一瞬间，变压器就 立刻响应，此时变压器的电流为非零电流，在任意一个周期，变压器都会储存能量。 连续导电模式（CCM）是反激变换器在固定频率下工作的一种典型工作方式[29]。图 2.8 为连续导电模式下开关电源工作时原边电流和副边电流（即二极管上的电流）波 形。副边电流的每个周期从一开始就储存能量结束时不归为零，这就要求在各个周期 中能量都被变压器储存，并且能量可以跨周期存在。因此，当负载电流改变时，变压 器中储存的能量也相应随之改变。
 
 \subsection{CRM临界导通模式}
+
+\begin{figure}[htbp] 
+    \centering
+    \includegraphics[width=0.8\linewidth]{figures/CRM模式.pdf}
+    \caption{CRM工作模式波形图}
+    \label{fig:CRM工作模式波形图}
+\end{figure}
+
+临界导通模式(Critical Conduction Mode,CRM)的工作原理和它的名称一样，是一种介于连续导通模式和断续导通模式中的特殊的工作模式。不同于其他开关电源拓扑，在非对称半桥反激式变换器的CRM工作模式下，原边电感电流和励磁电感电流重合的瞬间功率管进行切换动作，同时副边电感电流在此时恰好下降到零电流，变压器原边励磁电感内储存的能量刚好全部传递到副边，并经过短暂的死区时间后，开启下一个开关周期。
+
+临界导通模式不仅实现了最大的能量传递，还有助于实现非对称半桥反激式变换器的ZCS关断，减小关断损耗，并相较于DCM的ZCS，近似没有的死区时间极大的降低了导通损耗，提高变换器的效率。CRM工作模式的典型波形如图~\ref{fig:CRM工作模式波形图}所示。
+
+
+
+
+%\subsection{CRM临界导通模式}
 
 
 
@@ -324,10 +358,15 @@ PWM-PFM 是一种将 PWM 调制方法与 PFM 调制方法相结合的混合调�
 
  
 
+\section{小结}
 
 
-
-
+本章首先对反激式电源拓扑的工作原理进行了研究，从传统反激式变换器的拓扑结构到非对称半桥反激式变换器的拓扑结构；
+然后结合非对称半桥反激式系统中关键信号波形和工作状态对该其工作原理进行了具体的分析和理论推导；
+又分别针对CCM、DCM和CRM三种工作模式进行了阐述；
+接着简单介绍了PWM、PFM、PSM和PWMFM四种脉宽调制技术；
+再描述了开关电源中的两种环路控制方式，即电压控制模式和电流控制模式，对它们的工作原理以及优缺点进行了说明比较；
+最后对反激式变换器最常使用的原边反馈和副边反馈两种反馈方式的工作方式进行介绍和分析。
 
 
 
