@@ -51,7 +51,7 @@
 
 
 
-\iffalse
+
 \section{内部供电电路}
 
 \subsection{带隙基准电路}
@@ -98,10 +98,40 @@ $I_s$是PN结饱和电流，公式为：
 
 由式\eqref{eq:Vbe/T公式}和\eqref{eq:△Vbe/T公式}计算可知，在常温T=300K的条件下，当$V_{be}\thickapprox $ 750 mV时，$V_{be}$的负温度系数约等于-1.5 mV/K，$\varDelta V_{be}$的正温度系数为0.087ln(n) mV/K。为了合理地产生零温度系数电压，防止双极型晶体管的面积太大，需对正负温度系数加权相加可得。
 
-为了满足变换器芯片中的低压数字模块，
+图~\ref{fig:带隙基准电路原理图}中是本文所采用的带隙基准电路的原理图，电路结构包括带隙基准核心结构以及高阶补偿结构\cite{lee2020high_bg}。
 
+\begin{figure}[htbp] 
+    \centering
+    \includegraphics[width=0.8\linewidth]{figures/带隙基准电路图.pdf}
+    \caption{带隙基准电路原理图}
+    \label{fig:带隙基准电路原理图}
+\end{figure}
 
+本文设计的带隙基准使用了banba型电流模带隙基准电路，通过两个运放OP1、OP2分别产生正温度系数电流和负温度系数电流，将两种电流通过电流镜晶体管M4和M5相加抵消掉温度系数后流过电阻R3、R4产生带隙基准电压$V_{ref}$。
 
+其中通过运放OP1的输入端钳位A、B两点在电阻R1上产生正温度系数电压$\varDelta V_{be}$，取PNP三极管Q1和Q2的面积比为8:1，忽略电阻的温度系数后根据公式\eqref{eq:△Vbe/T公式}可以算得电流$I_{PTAT}$的正温度系数为：
+\begin{equation}
+    \label{eq:正温度系数电流公式}
+    \frac{\partial I_{PTAT}}{\partial T} = \frac{k}{q} \frac{1}{R_1} \cdot ln8
+\end{equation}
+
+通过运放OP2钳位B、C两点在电阻R2上产生负温度系数电压$V_{be2}$，负温度系数电流$I_{CTAT}$的公式为：
+\begin{equation}
+    \label{eq:负温度系数电流公式}
+    I_{CTAT} = \frac{V_{be2}}{R_2} 
+\end{equation}
+
+在不加入高阶补偿结构时，输出带隙基准电压$V_{ref}$的计算公式为：
+\begin{align}
+    \label{eq:带隙基准电压公式}
+    V_{ref} &= ( A I_{PTAT} + B I_{CTAT} ) (R_3+R_4) \\
+    &= \frac{R_3+R_4}{R_1} AV_Tln(n) + \frac{R_3+R_4}{R_2} BV_{be2}
+\end{align}
+其中电流镜晶体管M1和M5的宽长比为1:A，M3和M4的宽长比为1:B。
+
+为了进一步的提高带隙基准电路的温漂系数，同时加入了运放也引入了一定的失调电压，加入了高阶补偿结构。该高阶补偿结构由晶体管M6 $\sim$ M12组成，属于抽灌电流类型的高阶补偿结构，通过在正负温度下抽取对应温度系数电流来实现高阶补偿的目的。
+
+\iffalse
 \subsection{高压LDO电路}
 
 由辅助绕组产生的供电端电压对于片内的元器件而已电压过大且不够稳定，无法直接用于作为供电电压，需要设计用于产生稳定输出电压的低压线性稳压器电路，将供电端的高压转化为可为内部电路供电的电源电压输出。
@@ -120,117 +150,6 @@ $I_s$是PN结饱和电流，公式为：
 %\section{模式切换电路}
 
 
-
-\section{宽输出电压补偿的峰值电流控制电路}
-\label{sec:峰值电流控制电路}
-\subsection{宽输出电压补偿的峰值电流控制电路工作原理}
-
-在宽输出范围非对称半桥反激式变换器系统中，随着输出电压的提升，相同负载下输出功率也随之提高，低输出电压下的高边功率管导通时间HSGD内存储在励磁电感和谐振腔内的能量已无法满足高输出电压下输出功率的要求，系统将自动提高峰值电流电压以产生更长的导通时间HSGD存储更多的能量传递到副边，进而要求更大的副边反馈电压$V_{FB}$，影响电路内各种模块的正常功能，产生各种不稳定的情况。
-
-副边反馈电压$V_{FB}$随输出电压的波动是因为其是峰值电流电压$V_{CSP}$的重要组成部分，为了满足变大的输出功率，在开关频率不变的情况下，高边功率管更长的导通时间对应着更大的峰值电流$V_{CSP}$，$V_{FB}$也相应地增大。
-故为满足变换器系统的宽输出范围的工作需求，设计了宽输出电压补偿结构的峰值电流控制电路来根据输出电压对峰值电流电压$V_{CSP}$进行补偿，维持副边反馈信号在宽输出范围内均匀地分布在全负载下。
-
-%根据上文~\ref{sec:电流控制模式}小节的分析，如图~\ref{fig:电流工作模式电路图}中所示，可知副边反馈引脚电压信号是峰值电流电压$V_{CSP}$的重要组成部分，其可以一定程度地反映输出负载电流的大小。当负载电流突然增大时，为了满足变大的输出功率，变压器原边需要增加高边功率管的导通时间提供更多的能量传递给输出电容，因此$V_{CSP}$增大，$V_{FB}$也相应地增大；当负载电流突然减小时，同理$V_{FB}$也相应地减小。但在不同输出电压的情况下，相同负载电流下，信号$V_{FB}$稳定后电压值却大不相同，严重影响了芯片内多种电路模块，如精确谷底导通、谷值锁定、退磁时间动态校准等模块对$V_{FB}$的采样要求。为了避免此问题，需要设计峰值电流控制电路实现在当输出电压不同时，仍能维持信号$V_{FB}$的电压值在负载电流不变情况下的一致性。
-
-在峰值电流控制模式中，峰值电流电压$V_{CSP}$是通过采样电阻对电感电流采样实现的，具体的转换关系可表示为：
-\begin{align}
-    \label{eq:VCSP公式}
-    V_{CSP} = I_P \cdot R_{CS} 
-\end{align}
-其中$I_P$为原边电感电流的峰值。
-
-\begin{figure}[htbp] 
-    \centering
-    \includegraphics[width=0.8\linewidth]{figures/峰值电流控制.pdf}
-    \caption{峰值电流控制电路框图}
-    \label{fig:峰值电流控制框图}
-\end{figure}
-
-由于需要考虑到不同输出电压的影响，因此峰值电流电压$V_{CSP}$不能完全由副边反馈电压$V_{FB}$计算产生，需要引入携带输出电压信息的$V_{ZCD}$信号对$V_{CSP}$进行补偿，实现高边功率管导通时间在$V_{FB}$维持不变的情况下随着输出电压的变化而自动变化。其中辅助绕组电压$V_{ZCD}$和输出电压的关系如式\eqref{eq:VZCD公式}所示。
-
-片内峰值电流电压$V_{CSP}$产生电路的框图如图~\ref{fig:峰值电流控制框图}所示，峰值电流电压$V_{CSP}$由电压信号$V_{EA}$、$V_{OVC}$和$V_{HR}$加权求和所得。电压$V_{EA}$是信号$V_{FB}$乘以反馈电压衰减系数$k_1$所得；$V_{OVC}$是输出电压补偿信号，由输出电压$V_o$乘以输出电压补偿结构衰减系数$k_2$所得；$V_{HR}$是切换为RVS工作模式时的补偿电压，用来补偿模式切换时开关频率骤变后的峰值电流变化。$V_{CSP}$的公式可表达为：
-\begin{align}
-    \label{eq:VCSP公式1}
-    V_{CSP} &= V_{EA} + V_{OVC} + V_{HR} \\ &= k_1 V_{FB} + k_2 V_o + V_{HR}  
-\end{align}
-通过合理设置系数$k_1$和$k_2$的值，当输出电压切换导致$V_{CSP}$波动时，可以维持$V_{FB}$的稳定。
-
-下面分析峰值电流电压和高边功率管导通时间在CRM工作模式中不同输出电压下的关系。图~\ref{fig:峰值电流控制1}中显示了在不同输出电压下峰值电流电压、电感电流斜率和占空比的关系。当输出电压为$V_{o1}$时，对应的峰值电流电压为$V_{CSP1}$，高边功率管导通时间HSGD为$D_1T_s$；当输出电压为$V_{o1}$时，对应的峰值电流电压为$V_{CSP2}$，高边功率管导通时间HSGD为$D_2T_s$。其中，根据式\eqref{eq:CCM_4}可求得$\frac{D2}{D1} = 4$。但由于电感电流的斜率也会发生变化，不能直接将占空比的变化值直接套用于计算$V_{CSP2}$和$V_{CSP1}$的比值。结合式\eqref{eq:Vcr_1}电感电流的斜率$K_{slope}$的公式可表示为：
-\begin{equation}
-    \label{eq:电感电流斜率公式}
-    K_{slope} = \frac{V_{in} - N V_o}{L_m}
-\end{equation}
-由式\eqref{eq:电感电流斜率公式}可见，电感电流斜率会随着输出电压的变化而变化，输出电压越大，斜率越小。因此，在输出电压变化的情况下，峰值电流电压$V_{CSP}$的变化和占空比D的变化不成正比，不能直接对$V_{CSP}$乘以输出电压变化的倍数计算变化后的$V_{CSP}$。
-
-\begin{figure}[htbp] 
-    \centering
-    \includegraphics[width=0.6\linewidth]{figures/峰值电流控制1.pdf}
-    \caption{不同输出电压下的峰值电流电压波形}
-    \label{fig:峰值电流控制1}
-\end{figure}
-
-结合图~\ref{fig:峰值电流控制1}中带入公式\eqref{eq:电感电流斜率公式}得峰值电流电压的公式为：
-\begin{equation}
-    \label{eq:VCSP公式2}
-     V_{CSP} = K_{slope} \cdot DT_s = \frac{V_{in} - N V_o}{L_m} \cdot \frac{N V_o}{V_{in}} T_s
-\end{equation}
-
-分别将两个不同的输出电压$V_{o1}$和$V_{o2}$带入式中，可计算得$V_{CSP1}$和$V_{CSP2}$的比值为：
-\begin{equation}
-    \label{eq:VCSP公式3}
-    \frac{V_{CSP2}}{V_{CSP1}} = \frac{4 (V_{in} - NV_{o1})}{V_{in} - NV_{o2}}
-\end{equation}
-故当测得单一输出电压下的峰值电流电压值后，其他输出电压下的$V_{CSP}$也都可计算求出。
-
-为计算输出电压补偿衰减系数$k_2$的值，将不同的输出电压带入式\eqref{eq:VCSP公式1}中并作差可得：
-\begin{equation}
-    \label{eq:VCSP公式4}
-    \varDelta V_{CSP} = V_{CSP2}-V_{CSP1} = k_2 (V_{o2} - V_{o1})
-\end{equation}
-
-将式\eqref{eq:VCSP公式3}带入式\eqref{eq:VCSP公式4}中可求得输出电压补偿衰减系数$k_2$的公式为：
-\begin{equation}
-    \label{eq:k2公式}
-    k_2 = \{ \frac{4 (V_{in} - NV_{o1})}{V_{in} - NV_{o2}} - 1 \} V_{CSP1} \cdot \frac{1}{V_{o2} - V_{o1}}
-\end{equation}
-
-\begin{figure}[htbp] 
-    \centering
-    \includegraphics[width=1.0\linewidth]{figures/峰值控制电路图.pdf}
-    \caption{峰值控制电路电路图}
-    \label{fig:峰值控制电路图}
-\end{figure}
-
-带有宽输出电压补偿结构的峰值电流控制电路的具体电路图如图~\ref{fig:峰值控制电路图}所示。图中包括两个运放OP1和OP2组成的VCCS结构，该电路通过运放的虚短作用将OP1的输入端$V_{FB}$箝位到$V_{R1}$，$V_{R1}=V_{FB}$，调节运放输出端的电压控制晶体管M11的漏电流等于$I_{FB}$，同理运放OP2也将$V_{ZCD}$转化为电流$I_{ZCD}$。其中$I_{FB}$和$I_{ZCD}$的公式表达为：
-\begin{equation}
-    \label{eq:IFB公式}
-    I_{FB} = \frac{V_{FB}}{R_1}
-\end{equation}
-\begin{equation}
-    \label{eq:IZCD公式}
-    V_{CSP} = \frac{V_{ZCD,in}}{R_2}
-\end{equation}
-电流信号$I_{FB}$通过电流镜M12、M13镜像为电流$NI_{FB}$后，该电流流过电阻$R_{CSP1}$，形成电压$V_{EA}$，其中$V_{EA}=k_1V_{FB}$；电流信号$I_{ZCD}$通过电流镜M18、M19镜像为电流$MI_{ZCD}$后，该电流同样流过电阻$R_{CSP1}$，形成电压$V_{OVC}$，$V_{OVC}$的公式可表示为：
-\begin{equation}
-    \label{eq:VOVC公式}
-    V_{OVC} = \frac{MR_{CSP1}}{R_2}  V_{ZCD,in}
-\end{equation}
-除此之外，$R_{CSP1}$上的电流还包括补偿电流信号$I_{com}$和用于补偿模式切换的电流信号$I_{HR}$，分别在$R_{CSP1}$上形成电压$V_{com}$和$V_{HR}$。电压$V_{com}$用于对副边反馈电压的值进行微调，以匹配其他电路模块的工作要求。电阻$R_{CSP2}$的取值需要考虑到当工作模式切换为CRM模式时晶体管M17的过驱动电压，保证M17可以正常工作。
-
-电路中电阻$R_1$和$R_2$的取值与对应的衰减系数$k_1$和$k_2$以及电流镜的复制比有关。当电阻$R_{CSP1}$的阻值确定后，根据反馈电压衰减系数$k_1$的值可求得电阻$R_1$为：
-\begin{equation}
-    \label{eq:R1公式}
-    R_1 = \frac{NR_{CSP1}}{k_1}
-\end{equation}
-电阻$R_2$的计算公式需将公式\eqref{eq:VZCD公式}和\eqref{eq:k2公式}带入公式\eqref{eq:VOVC公式}中即可求得：
-\begin{align}
-    \label{eq:R2公式}
-    R_2 &= \frac{MR_{CSP1}}{V_{OVC}}  V_{ZCD} = \frac{R_{CSP1}}{k_2 V_o}  V_{ZCD}
-    \\  &= \frac{MR_{CSP1}}{\{ \frac{4 (V_{in} - NV_{o1})}{V_{in} - NV_{o2}} - 1 \} V_{CSP1} \cdot \frac{1}{V_{o2} - V_{o1}}}  \frac{N_A}{N_S}\frac{R_{a2}}{R_{a1}+R_{a2}}
-\end{align}
-
-
-\subsection{宽输出电压补偿的峰值电流控制电路仿真分析}
 
 
 
@@ -340,8 +259,8 @@ $I_s$是PN结饱和电流，公式为：
 
 \begin{figure}[H]
 	\centering
-	\subcaptionbox{未稳定\label{fig:谷底导通仿真图1}}{\includegraphics[width = 0.6\linewidth]{figures/valley_switch1.png}}
-	\subcaptionbox{稳定\label{fig:谷底导通仿真图2}}{\includegraphics[width = 0.6\linewidth]{figures/valley_switch2.png}}
+	\subcaptionbox{未稳定\label{fig:谷底导通仿真图1}}{\includegraphics[width = 0.49\linewidth]{figures/valley_switch1.png}}
+	\subcaptionbox{稳定\label{fig:谷底导通仿真图2}}{\includegraphics[width = 0.49\linewidth]{figures/valley_switch2.png}}
 	\caption{谷底导通放大仿真图}
 	\label{fig:谷底导通放大仿真图}
 \end{figure}
@@ -493,8 +412,8 @@ $I_s$是PN结饱和电流，公式为：
 
 \begin{figure}[htbp]
 	\centering
-	\subcaptionbox{1.5A负载\label{fig:谷值锁定仿真图1}}{\includegraphics[width = 0.6\linewidth]{figures/valley_lock1.5A.png}}
-	\subcaptionbox{2A负载  \label{fig:谷值锁定仿真图2}}{\includegraphics[width = 0.6\linewidth]{figures/valley_lock2A.png}}
+	\subcaptionbox{1.5A负载\label{fig:谷值锁定仿真图1}}{\includegraphics[width = 0.49\linewidth]{figures/valley_lock1.5A.png}}
+	\subcaptionbox{2A负载  \label{fig:谷值锁定仿真图2}}{\includegraphics[width = 0.49\linewidth]{figures/valley_lock2A.png}}
 	\caption{不同负载谷值锁定仿真图}
 	\label{fig:谷值锁定放大仿真图}
 \end{figure}
@@ -508,8 +427,8 @@ $V_{FB}$的电压值迅速超过$V_{a3}$或低于$V_{a0}$时，判断该情况�
 
 \begin{figure}[htbp]
 	\centering
-	\subcaptionbox{1.5A-2A  \label{fig:谷值锁定慢切换仿真}}{\includegraphics[width = 0.6\linewidth]{figures/valley_lock_slow.png}}
-	\subcaptionbox{0A-2.5A  \label{fig:谷值锁定快切换仿真}}{\includegraphics[width = 0.6\linewidth]{figures/valley_lock_fast.png}}
+	\subcaptionbox{1.5A-2A  \label{fig:谷值锁定慢切换仿真}}{\includegraphics[width = 0.49\linewidth]{figures/valley_lock_slow.png}}
+	\subcaptionbox{0A-2.5A  \label{fig:谷值锁定快切换仿真}}{\includegraphics[width = 0.49\linewidth]{figures/valley_lock_fast.png}}
 	\caption{快慢切换的谷值锁定仿真图}
 	\label{fig:快慢切换的谷值锁定仿真图}
 \end{figure}
@@ -575,23 +494,147 @@ $V_{FB}$的电压值迅速超过$V_{a3}$或低于$V_{a0}$时，判断该情况�
 
 \subsection{退磁时间动态校准电路仿真分析}
 
-
 \begin{figure}[htbp] 
     \centering
     \includegraphics[width=0.9\linewidth]{figures/StepByStep.pdf}
-    \subcaptionbox{未稳定\label{fig:退磁时间仿真图1}}{\includegraphics[width = 0.6\linewidth]{figures/stepbystep1.png}}
-	\subcaptionbox{稳定  \label{fig:退磁时间仿真图2}}{\includegraphics[width = 0.6\linewidth]{figures/stepbystep2.png}}
-    \caption{退磁时间动态校准电路波形图}
-    \label{fig:退磁时间动态校准电路波形图}
+    \caption{退磁时间动态校准电路f仿真波形图}
+    \label{fig:退磁时间动态校准电路f仿真波形图}
+\end{figure} 
+
+\begin{figure}[htbp] 
+    \centering
+    \subcaptionbox{未稳定\label{fig:退磁时间仿真图1}}{\includegraphics[width = 0.49\linewidth]{figures/stepbystep1.png}}
+	\subcaptionbox{稳定  \label{fig:退磁时间仿真图2}}{\includegraphics[width = 0.49\linewidth]{figures/stepbystep2.png}}
+    \caption{退磁时间动态校准电路具体仿真波形图}
+    \label{fig:退磁时间动态校准电路具体仿真波形图}
 \end{figure}
 
-退磁时间动态校准电路的具体波形图如图~\ref{fig:退磁时间动态校准电路波形图}所示，该波形图和图~\ref{fig:动态校准闭环补偿波形图}中的示意波形一致，从具体的仿真波形图可以看到，在$t_1$时刻所处的开关周期内，逻辑控制信号LS未能和退磁完成时间信号LST重叠，说明此时低边功率管的导通时间较长，能量虽完全传递到副边但变压器未立刻反转导致的原边电流反向励磁产生了很多不必要的损耗，但随着通过几个开关周期的不断逼近，在$t_4$时刻补偿电压$V_{com}$逐渐稳定在888mV处，电压Vee和Ve也都贴近了参考电压VH，逻辑控制信号LS和励磁电感退磁完全时间信号LST重叠，此时低边功率管导通时间近似完全等于原边励磁电感退磁完成时间，实现了能量的最大传递功能。其中，由于输出负载电流突变引起的开关频率变化也未对退磁时间动态校准电路的结果产生影响，证明了该电路在不同负载下的兼容性。
+退磁时间动态校准电路的具体波形图如图~\ref{fig:退磁时间动态校准电路f仿真波形图}所示，该波形图和图~\ref{fig:动态校准闭环补偿波形图}中的示意波形一致，从具体的仿真波形图可以看到，在$t_1$时刻所处的开关周期内，逻辑控制信号LS未能和退磁完成时间信号LST重叠，说明此时低边功率管的导通时间较长，能量虽完全传递到副边但变压器未立刻反转导致的原边电流反向励磁产生了很多不必要的损耗，但随着通过几个开关周期的不断逼近，在$t_4$时刻补偿电压$V_{com}$逐渐稳定在888mV处，电压Vee和Ve也都贴近了参考电压VH，逻辑控制信号LS和励磁电感退磁完全时间信号LST重叠，此时低边功率管导通时间近似完全等于原边励磁电感退磁完成时间，实现了能量的最大传递功能。其中，由于输出负载电流突变引起的开关频率变化也未对退磁时间动态校准电路的结果产生影响，证明了该电路在不同负载下的兼容性。
 
-图~\ref{fig:退磁时间仿真图1}为整体仿真图中斜坡电压$V_ramp$未稳定时，$t_1$到$t_2$时间段内的四个开关周期的仿真图，可以观察到第一个开关周期内信号$V_{ZCD}$上的高频谐波振荡，在此高频振荡处，副边电流$I_{sec}$刚好降低为零，原副边的能量传递结束，信号LST从高电平降低为低电平，此时积分器斜坡电压$V_ramp$的斜率较低，等于121kV/s，补偿电压在信号LS和信号LST未重叠区间内逐渐增大，提高积分器斜坡电压的$V_ramp$的下一周期斜率，在该图中的第四个开关周期斜坡斜率已增大为138kV/s，信号LS和信号LST未重叠区间也大大减小，逐步逼近功能实现优异。图~\ref{fig:退磁时间仿真图2}为斜坡电压$V_ramp$稳定时，$t_3$到$t_4$时间段内两个开关周期的仿真图，可以观察到此时补偿电压$V_{com}$不在发生变化，两个开关周期内斜坡电压$V_ramp$的斜率也同时维持在167kV/s，证明了该退磁时间动态校准电路的基本功能已实现，充分提高了整体系统的高效率能量传递且具有较好的鲁棒性。
-
-
+图~\ref{fig:退磁时间仿真图1}为整体仿真图中斜坡电压$V_{ramp}$未稳定时，$t_1$到$t_2$时间段内的四个开关周期的仿真图，可以观察到第一个开关周期内信号$V_{ZCD}$上的高频谐波振荡，在此高频振荡处，副边电流$I_{sec}$刚好降低为零，原副边的能量传递结束，信号LST从高电平降低为低电平，此时积分器斜坡电压$V_{ramp}$的斜率较低，等于121kV/s，补偿电压在信号LS和信号LST未重叠区间内逐渐增大，提高积分器斜坡电压的$V_{ramp}$的下一周期斜率，在该图中的第四个开关周期斜坡斜率已增大为138kV/s，信号LS和信号LST未重叠区间也大大减小，逐步逼近功能实现优异。图~\ref{fig:退磁时间仿真图2}为斜坡电压$V_{ramp}$稳定时，$t_3$到$t_4$时间段内两个开关周期的仿真图，可以观察到此时补偿电压$V_{com}$不在发生变化，两个开关周期内斜坡电压$V_{ramp}$的斜率也同时维持在167kV/s，证明了该退磁时间动态校准电路的基本功能已实现，充分提高了整体系统的高效率能量传递且具有较好的鲁棒性。
 
 
+
+\section{宽输出电压补偿的峰值电流控制电路}
+\label{sec:峰值电流控制电路}
+\subsection{宽输出电压补偿的峰值电流控制电路工作原理}
+
+在宽输出范围非对称半桥反激式变换器系统中，随着输出电压的提升，相同负载下输出功率也随之提高，低输出电压下的高边功率管导通时间HSGD内存储在励磁电感和谐振腔内的能量已无法满足高输出电压下输出功率的要求，系统将自动提高峰值电流电压以产生更长的导通时间HSGD存储更多的能量传递到副边，进而要求更大的副边反馈电压$V_{FB}$，影响电路内各种模块的正常功能，产生各种不稳定的情况。
+
+副边反馈电压$V_{FB}$随输出电压的波动是因为其是峰值电流电压$V_{CSP}$的重要组成部分，为了满足变大的输出功率，在开关频率不变的情况下，高边功率管更长的导通时间对应着更大的峰值电流$V_{CSP}$，$V_{FB}$也相应地增大。
+故为满足变换器系统的宽输出范围的工作需求，设计了宽输出电压补偿结构的峰值电流控制电路来根据输出电压对峰值电流电压$V_{CSP}$进行补偿，维持副边反馈信号在宽输出范围内均匀地分布在全负载下。
+
+%根据上文~\ref{sec:电流控制模式}小节的分析，如图~\ref{fig:电流工作模式电路图}中所示，可知副边反馈引脚电压信号是峰值电流电压$V_{CSP}$的重要组成部分，其可以一定程度地反映输出负载电流的大小。当负载电流突然增大时，为了满足变大的输出功率，变压器原边需要增加高边功率管的导通时间提供更多的能量传递给输出电容，因此$V_{CSP}$增大，$V_{FB}$也相应地增大；当负载电流突然减小时，同理$V_{FB}$也相应地减小。但在不同输出电压的情况下，相同负载电流下，信号$V_{FB}$稳定后电压值却大不相同，严重影响了芯片内多种电路模块，如精确谷底导通、谷值锁定、退磁时间动态校准等模块对$V_{FB}$的采样要求。为了避免此问题，需要设计峰值电流控制电路实现在当输出电压不同时，仍能维持信号$V_{FB}$的电压值在负载电流不变情况下的一致性。
+
+在峰值电流控制模式中，峰值电流电压$V_{CSP}$是通过采样电阻对电感电流采样实现的，具体的转换关系可表示为：
+\begin{align}
+    \label{eq:VCSP公式}
+    V_{CSP} = I_P \cdot R_{CS} 
+\end{align}
+其中$I_P$为原边电感电流的峰值。
+
+\begin{figure}[htbp] 
+    \centering
+    \includegraphics[width=0.8\linewidth]{figures/峰值电流控制.pdf}
+    \caption{峰值电流控制电路框图}
+    \label{fig:峰值电流控制框图}
+\end{figure}
+
+由于需要考虑到不同输出电压的影响，因此峰值电流电压$V_{CSP}$不能完全由副边反馈电压$V_{FB}$计算产生，需要引入携带输出电压信息的$V_{ZCD}$信号对$V_{CSP}$进行补偿，实现高边功率管导通时间在$V_{FB}$维持不变的情况下随着输出电压的变化而自动变化。其中辅助绕组电压$V_{ZCD}$和输出电压的关系如式\eqref{eq:VZCD公式}所示。
+
+片内峰值电流电压$V_{CSP}$产生电路的框图如图~\ref{fig:峰值电流控制框图}所示，峰值电流电压$V_{CSP}$由电压信号$V_{EA}$、$V_{OVC}$和$V_{HR}$加权求和所得。电压$V_{EA}$是信号$V_{FB}$乘以反馈电压衰减系数$k_1$所得；$V_{OVC}$是输出电压补偿信号，由输出电压$V_o$乘以输出电压补偿结构衰减系数$k_2$所得；$V_{HR}$是切换为RVS工作模式时的补偿电压，用来补偿模式切换时开关频率骤变后的峰值电流变化。$V_{CSP}$的公式可表达为：
+\begin{align}
+    \label{eq:VCSP公式1}
+    V_{CSP} &= V_{EA} + V_{OVC} + V_{HR} \\ &= k_1 V_{FB} + k_2 V_o + V_{HR}  
+\end{align}
+通过合理设置系数$k_1$和$k_2$的值，当输出电压切换导致$V_{CSP}$波动时，可以维持$V_{FB}$的稳定。
+
+下面分析峰值电流电压和高边功率管导通时间在CRM工作模式中不同输出电压下的关系。图~\ref{fig:峰值电流控制1}中显示了在不同输出电压下峰值电流电压、电感电流斜率和占空比的关系。当输出电压为$V_{o1}$时，对应的峰值电流电压为$V_{CSP1}$，高边功率管导通时间HSGD为$D_1T_s$；当输出电压为$V_{o1}$时，对应的峰值电流电压为$V_{CSP2}$，高边功率管导通时间HSGD为$D_2T_s$。其中，根据式\eqref{eq:CCM_4}可求得$\frac{D2}{D1} = 4$。但由于电感电流的斜率也会发生变化，不能直接将占空比的变化值直接套用于计算$V_{CSP2}$和$V_{CSP1}$的比值。结合式\eqref{eq:Vcr_1}电感电流的斜率$K_{slope}$的公式可表示为：
+\begin{equation}
+    \label{eq:电感电流斜率公式}
+    K_{slope} = \frac{V_{in} - N V_o}{L_m}
+\end{equation}
+由式\eqref{eq:电感电流斜率公式}可见，电感电流斜率会随着输出电压的变化而变化，输出电压越大，斜率越小。因此，在输出电压变化的情况下，峰值电流电压$V_{CSP}$的变化和占空比D的变化不成正比，不能直接对$V_{CSP}$乘以输出电压变化的倍数计算变化后的$V_{CSP}$。
+
+\begin{figure}[htbp] 
+    \centering
+    \includegraphics[width=0.6\linewidth]{figures/峰值电流控制1.pdf}
+    \caption{不同输出电压下的峰值电流电压波形}
+    \label{fig:峰值电流控制1}
+\end{figure}
+
+结合图~\ref{fig:峰值电流控制1}中带入公式\eqref{eq:电感电流斜率公式}得峰值电流电压的公式为：
+\begin{equation}
+    \label{eq:VCSP公式2}
+     V_{CSP} = K_{slope} \cdot DT_s = \frac{V_{in} - N V_o}{L_m} \cdot \frac{N V_o}{V_{in}} T_s
+\end{equation}
+
+分别将两个不同的输出电压$V_{o1}$和$V_{o2}$带入式中，可计算得$V_{CSP1}$和$V_{CSP2}$的比值为：
+\begin{equation}
+    \label{eq:VCSP公式3}
+    \frac{V_{CSP2}}{V_{CSP1}} = \frac{4 (V_{in} - NV_{o1})}{V_{in} - NV_{o2}}
+\end{equation}
+故当测得单一输出电压下的峰值电流电压值后，其他输出电压下的$V_{CSP}$也都可计算求出。
+
+为计算输出电压补偿衰减系数$k_2$的值，将不同的输出电压带入式\eqref{eq:VCSP公式1}中并作差可得：
+\begin{equation}
+    \label{eq:VCSP公式4}
+    \varDelta V_{CSP} = V_{CSP2}-V_{CSP1} = k_2 (V_{o2} - V_{o1})
+\end{equation}
+
+将式\eqref{eq:VCSP公式3}带入式\eqref{eq:VCSP公式4}中可求得输出电压补偿衰减系数$k_2$的公式为：
+\begin{equation}
+    \label{eq:k2公式}
+    k_2 = \{ \frac{4 (V_{in} - NV_{o1})}{V_{in} - NV_{o2}} - 1 \} V_{CSP1} \cdot \frac{1}{V_{o2} - V_{o1}}
+\end{equation}
+
+\begin{figure}[htbp] 
+    \centering
+    \includegraphics[width=1.0\linewidth]{figures/峰值控制电路图.pdf}
+    \caption{峰值控制电路电路图}
+    \label{fig:峰值控制电路图}
+\end{figure}
+
+带有宽输出电压补偿结构的峰值电流控制电路的具体电路图如图~\ref{fig:峰值控制电路图}所示。图中包括两个运放OP1和OP2组成的VCCS结构，该电路通过运放的虚短作用将OP1的输入端$V_{FB}$箝位到$V_{R1}$，$V_{R1}=V_{FB}$，调节运放输出端的电压控制晶体管M11的漏电流等于$I_{FB}$，同理运放OP2也将$V_{ZCD}$转化为电流$I_{ZCD}$。其中$I_{FB}$和$I_{ZCD}$的公式表达为：
+\begin{equation}
+    \label{eq:IFB公式}
+    I_{FB} = \frac{V_{FB}}{R_1}
+\end{equation}
+\begin{equation}
+    \label{eq:IZCD公式}
+    V_{CSP} = \frac{V_{ZCD,in}}{R_2}
+\end{equation}
+电流信号$I_{FB}$通过电流镜M12、M13镜像为电流$NI_{FB}$后，该电流流过电阻$R_{CSP1}$，形成电压$V_{EA}$，其中$V_{EA}=k_1V_{FB}$；电流信号$I_{ZCD}$通过电流镜M18、M19镜像为电流$MI_{ZCD}$后，该电流同样流过电阻$R_{CSP1}$，形成电压$V_{OVC}$，$V_{OVC}$的公式可表示为：
+\begin{equation}
+    \label{eq:VOVC公式}
+    V_{OVC} = \frac{MR_{CSP1}}{R_2}  V_{ZCD,in}
+\end{equation}
+除此之外，$R_{CSP1}$上的电流还包括补偿电流信号$I_{com}$和用于补偿模式切换的电流信号$I_{HR}$，分别在$R_{CSP1}$上形成电压$V_{com}$和$V_{HR}$。电压$V_{com}$用于对副边反馈电压的值进行微调，以匹配其他电路模块的工作要求。电阻$R_{CSP2}$的取值需要考虑到当工作模式切换为CRM模式时晶体管M17的过驱动电压，保证M17可以正常工作。
+
+电路中电阻$R_1$和$R_2$的取值与对应的衰减系数$k_1$和$k_2$以及电流镜的复制比有关。当电阻$R_{CSP1}$的阻值确定后，根据反馈电压衰减系数$k_1$的值可求得电阻$R_1$为：
+\begin{equation}
+    \label{eq:R1公式}
+    R_1 = \frac{NR_{CSP1}}{k_1}
+\end{equation}
+电阻$R_2$的计算公式需将公式\eqref{eq:VZCD公式}和\eqref{eq:k2公式}带入公式\eqref{eq:VOVC公式}中即可求得：
+\begin{align}
+    \label{eq:R2公式}
+    R_2 &= \frac{MR_{CSP1}}{V_{OVC}}  V_{ZCD} = \frac{R_{CSP1}}{k_2 V_o}  V_{ZCD}
+    \\  &= \frac{MR_{CSP1}}{\{ \frac{4 (V_{in} - NV_{o1})}{V_{in} - NV_{o2}} - 1 \} V_{CSP1} \cdot \frac{1}{V_{o2} - V_{o1}}}  \frac{N_A}{N_S}\frac{R_{a2}}{R_{a1}+R_{a2}}
+\end{align}
+
+
+\subsection{宽输出电压补偿的峰值电流控制电路仿真分析}
+
+\begin{figure}[htbp] 
+    \centering
+    \includegraphics[width=0.8\linewidth]{figures/MODE_SE.png}
+    \caption{宽输出电压补偿峰值电流控制电路仿真波形图}
+    \label{fig:宽输出电压补偿峰值电流控制电路仿真波形图}
+\end{figure}
+
+图~\ref{fig:宽输出电压补偿峰值电流控制电路仿真波形图}分别显示了宽输出电压补偿峰值电流控制电路工作在5V 1.5A和20V 1.5A工况下的具体仿真波形图，可以观察到此时整体电路稳定工作在设定的额定电压值上，峰值电流电压$V_{CSP}$分别为399mV和140.3V，符合公式\eqref{eq:VCSP公式3}的计算结果，在宽输出电压补偿结构的控制下副边反馈信号$V_{FB}$在不同输出电压下近似相等，在RVS工作模式下$V_{FB}$进一步控制谷值锁定电路产生一致的等待时间$T_w$，同时$T_w$内的谐振波谷的目标谷值数量也锁定在相同谷值。
+仿真波形图成功验证了该电路的可行性，实现宽输出电压范围下输出电流与反馈信号$V_{FB}$的一一对应关系，最大限度地降低不同输出电压值对变换器芯片控制电路的影响。
 
 
 

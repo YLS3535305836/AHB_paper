@@ -16,5 +16,1248 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{shen2012}{book}{}
+      \name{author}{1}{}{%
+        {{hash=b593d692d724715ea5b25ea97da76460}{%
+           family={沈显庆},
+           familyi={沈\bibinitperiod}}}%
+      }
+      \name{namea}{1}{}{%
+        {{hash=b593d692d724715ea5b25ea97da76460}{%
+           family={沈显庆},
+           familyi={沈\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {chinese}%
+      }
+      \list{location}{1}{%
+        {南京}%
+      }
+      \list{publisher}{1}{%
+        {东南大学出版社}%
+      }
+      \strng{namehash}{b593d692d724715ea5b25ea97da76460}
+      \strng{fullhash}{b593d692d724715ea5b25ea97da76460}
+      \strng{bibnamehash}{b593d692d724715ea5b25ea97da76460}
+      \strng{authorbibnamehash}{b593d692d724715ea5b25ea97da76460}
+      \strng{authornamehash}{b593d692d724715ea5b25ea97da76460}
+      \strng{authorfullhash}{b593d692d724715ea5b25ea97da76460}
+      \strng{nameabibnamehash}{b593d692d724715ea5b25ea97da76460}
+      \strng{nameanamehash}{b593d692d724715ea5b25ea97da76460}
+      \strng{nameafullhash}{b593d692d724715ea5b25ea97da76460}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{languageid}{chinese}
+      \field{lansortorder}{1}
+      \field{title}{开关电源原理与设计}
+      \field{usera}{M}
+      \field{userd}{chinese}
+      \field{userf}{chinese}
+      \field{year}{2012}
+      \field{dateera}{ce}
+      \keyw{shen2012}
+    \endentry
+    \entry{ic_power_management_book}{book}{}
+      \name{author}{1}{}{%
+        {{hash=6a366bc33ce7796063af30452154b02d}{%
+           family={陈科宏},
+           familyi={陈\bibinitperiod}}}%
+      }
+      \name{namea}{1}{}{%
+        {{hash=6a366bc33ce7796063af30452154b02d}{%
+           family={陈科宏},
+           familyi={陈\bibinitperiod}}}%
+      }
+      \true{moretranslator}
+      \name{translator}{1}{}{%
+        {{hash=637df5fbc4925553a57a427ffacdb2cc}{%
+           family={陈铖颖},
+           familyi={陈\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {chinese}%
+      }
+      \list{location}{1}{%
+        {北京}%
+      }
+      \list{publisher}{1}{%
+        {机械工业出版社}%
+      }
+      \strng{namehash}{6a366bc33ce7796063af30452154b02d}
+      \strng{fullhash}{6a366bc33ce7796063af30452154b02d}
+      \strng{bibnamehash}{6a366bc33ce7796063af30452154b02d}
+      \strng{authorbibnamehash}{6a366bc33ce7796063af30452154b02d}
+      \strng{authornamehash}{6a366bc33ce7796063af30452154b02d}
+      \strng{authorfullhash}{6a366bc33ce7796063af30452154b02d}
+      \strng{nameabibnamehash}{6a366bc33ce7796063af30452154b02d}
+      \strng{nameanamehash}{6a366bc33ce7796063af30452154b02d}
+      \strng{nameafullhash}{6a366bc33ce7796063af30452154b02d}
+      \strng{translatorbibnamehash}{5afb270d062439ea9b734effcf3fd383}
+      \strng{translatornamehash}{5afb270d062439ea9b734effcf3fd383}
+      \strng{translatorfullhash}{5afb270d062439ea9b734effcf3fd383}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{languageid}{chinese}
+      \field{lansortorder}{1}
+      \field{month}{4}
+      \field{title}{集成电路设计中的电源管理技术}
+      \field{usera}{M}
+      \field{userd}{chinese}
+      \field{usere}{chinese}
+      \field{userf}{chinese}
+      \field{year}{2020.4}
+      \keyw{ic_power_management_book}
+      \warn{\item book entry 'ic_power_management_book' (chapters/references.bib): Invalid format '2020.4' of date field 'date' - ignoring}
+    \endentry
+    \entry{hu2013}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=e8ffcf09b8d39057d6bea83e9e02f8c5}{%
+           family={{Sideng Hu}},
+           familyi={S\bibinitperiod}}}%
+        {{hash=814ef46498a441038f2bee9b93ee916b}{%
+           family={{Junjun Deng}},
+           familyi={J\bibinitperiod}}}%
+        {{hash=94fde001c974e7a74d7337398424b4e4}{%
+           family={{Chris Mi}},
+           familyi={C\bibinitperiod}}}%
+        {{hash=2a4d7be63d943158e06a3ad121d0865f}{%
+           family={{Mengyang Zhang}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \name{namea}{4}{}{%
+        {{hash=e8ffcf09b8d39057d6bea83e9e02f8c5}{%
+           family={{Sideng Hu}},
+           familyi={S\bibinitperiod}}}%
+        {{hash=814ef46498a441038f2bee9b93ee916b}{%
+           family={{Junjun Deng}},
+           familyi={J\bibinitperiod}}}%
+        {{hash=94fde001c974e7a74d7337398424b4e4}{%
+           family={{Chris Mi}},
+           familyi={C\bibinitperiod}}}%
+        {{hash=2a4d7be63d943158e06a3ad121d0865f}{%
+           family={{Mengyang Zhang}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{location}{1}{%
+        {Long Beach, CA, USA}%
+      }
+      \strng{namehash}{b26477eff88f1077c8bcc946c063ff36}
+      \strng{fullhash}{33f69dbcaddce1be1c781ee025bf7013}
+      \strng{bibnamehash}{6a0a24fa58abbc26920eef21179ceed5}
+      \strng{authorbibnamehash}{6a0a24fa58abbc26920eef21179ceed5}
+      \strng{authornamehash}{b26477eff88f1077c8bcc946c063ff36}
+      \strng{authorfullhash}{33f69dbcaddce1be1c781ee025bf7013}
+      \strng{nameabibnamehash}{6a0a24fa58abbc26920eef21179ceed5}
+      \strng{nameanamehash}{b26477eff88f1077c8bcc946c063ff36}
+      \strng{nameafullhash}{33f69dbcaddce1be1c781ee025bf7013}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Twenty-Eighth Annual IEEE Applied Power Electronics Conference and Exposition (APEC)}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{LLC Resonant Converters for PHEV Battery Chargers}
+      \field{usera}{C}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{year}{2013}
+      \field{dateera}{ce}
+      \keyw{hu2013}
+    \endentry
+    \entry{zhang2004}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=335bc1835daf3aebd872d955b955d96d}{%
+           family={{J.M. Zhang}},
+           familyi={J\bibinitperiod}}}%
+        {{hash=21c0a34ba934e40a358d6d1d1437376f}{%
+           family={{ X.G. Xie}},
+           familyi={_\bibinitperiod}}}%
+        {{hash=50cfae2a275f4866917dc33b01311d7a}{%
+           family={{X.K. Wu}},
+           familyi={X\bibinitperiod}}}%
+        {{hash=29c13890d1f89fe37da70e0a1568433b}{%
+           family={{Zhaoming Qian}},
+           familyi={Z\bibinitperiod}}}%
+      }
+      \name{namea}{4}{}{%
+        {{hash=335bc1835daf3aebd872d955b955d96d}{%
+           family={{J.M. Zhang}},
+           familyi={J\bibinitperiod}}}%
+        {{hash=21c0a34ba934e40a358d6d1d1437376f}{%
+           family={{ X.G. Xie}},
+           familyi={_\bibinitperiod}}}%
+        {{hash=50cfae2a275f4866917dc33b01311d7a}{%
+           family={{X.K. Wu}},
+           familyi={X\bibinitperiod}}}%
+        {{hash=29c13890d1f89fe37da70e0a1568433b}{%
+           family={{Zhaoming Qian}},
+           familyi={Z\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{location}{1}{%
+        {Aachen}%
+      }
+      \strng{namehash}{01938225e66bfce3bfa815db0673ee57}
+      \strng{fullhash}{f3f4845c2144e2505be92f48b2e7d6da}
+      \strng{bibnamehash}{5f7cc500d4f6d417c73eb4bc33487aa1}
+      \strng{authorbibnamehash}{5f7cc500d4f6d417c73eb4bc33487aa1}
+      \strng{authornamehash}{01938225e66bfce3bfa815db0673ee57}
+      \strng{authorfullhash}{f3f4845c2144e2505be92f48b2e7d6da}
+      \strng{nameabibnamehash}{5f7cc500d4f6d417c73eb4bc33487aa1}
+      \strng{nameanamehash}{01938225e66bfce3bfa815db0673ee57}
+      \strng{nameafullhash}{f3f4845c2144e2505be92f48b2e7d6da}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IEEE 35th Annual Power Electronics Specialists Conference}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{Comparison study of phase-shifted full bridge ZVS converters}
+      \field{usera}{C}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{year}{2004}
+      \field{dateera}{ce}
+      \keyw{zhang2004}
+    \endentry
+    \entry{li2019analysis}{article}{}
+      \name{author}{3}{}{%
+        {{hash=a34eb8751f2943f9d1f92252e180ae94}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Mingxiao},
+           giveni={M\bibinitperiod}}}%
+        {{hash=bfb4937ec3cbd4e83a459411b048894a}{%
+           family={Ouyang},
+           familyi={O\bibinitperiod},
+           given={Ziwei},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=e18c4ece7312e3950eb0a6ac5fd9e9ad}{%
+           family={Andersen},
+           familyi={A\bibinitperiod},
+           given={Michael\bibnamedelima AE},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \name{namea}{3}{}{%
+        {{hash=a34eb8751f2943f9d1f92252e180ae94}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Mingxiao},
+           giveni={M\bibinitperiod}}}%
+        {{hash=bfb4937ec3cbd4e83a459411b048894a}{%
+           family={Ouyang},
+           familyi={O\bibinitperiod},
+           given={Ziwei},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=e18c4ece7312e3950eb0a6ac5fd9e9ad}{%
+           family={Andersen},
+           familyi={A\bibinitperiod},
+           given={Michael\bibnamedelima AE},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{a979d410cb6d41605160c37123b64e34}
+      \strng{fullhash}{481b2e69182ab5db53877ae4f18f94c7}
+      \strng{bibnamehash}{481b2e69182ab5db53877ae4f18f94c7}
+      \strng{authorbibnamehash}{481b2e69182ab5db53877ae4f18f94c7}
+      \strng{authornamehash}{a979d410cb6d41605160c37123b64e34}
+      \strng{authorfullhash}{481b2e69182ab5db53877ae4f18f94c7}
+      \strng{nameabibnamehash}{481b2e69182ab5db53877ae4f18f94c7}
+      \strng{nameanamehash}{a979d410cb6d41605160c37123b64e34}
+      \strng{nameafullhash}{481b2e69182ab5db53877ae4f18f94c7}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE transactions on industrial electronics}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{number}{10}
+      \field{title}{Analysis and optimal design of high-frequency and high-efficiency asymmetrical half-bridge flyback converters}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{67}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{pages}{8312\bibrangedash 8321}
+      \range{pages}{10}
+      \keyw{li2019analysis}
+    \endentry
+    \entry{spiazzi2011high}{article}{}
+      \name{author}{3}{}{%
+        {{hash=391109d2d1933fd210b1558edf59e69e}{%
+           family={Spiazzi},
+           familyi={S\bibinitperiod},
+           given={Giorgio},
+           giveni={G\bibinitperiod}}}%
+        {{hash=6e3bb3e15e633761f2cf3c28018bd1c7}{%
+           family={Mattavelli},
+           familyi={M\bibinitperiod},
+           given={Paolo},
+           giveni={P\bibinitperiod}}}%
+        {{hash=594034da43774ed849abbec00243f7da}{%
+           family={Costabeber},
+           familyi={C\bibinitperiod},
+           given={Alessandro},
+           giveni={A\bibinitperiod}}}%
+      }
+      \name{namea}{3}{}{%
+        {{hash=391109d2d1933fd210b1558edf59e69e}{%
+           family={Spiazzi},
+           familyi={S\bibinitperiod},
+           given={Giorgio},
+           giveni={G\bibinitperiod}}}%
+        {{hash=6e3bb3e15e633761f2cf3c28018bd1c7}{%
+           family={Mattavelli},
+           familyi={M\bibinitperiod},
+           given={Paolo},
+           giveni={P\bibinitperiod}}}%
+        {{hash=594034da43774ed849abbec00243f7da}{%
+           family={Costabeber},
+           familyi={C\bibinitperiod},
+           given={Alessandro},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{ffcb08e3be1f53ca64404ec0dbfe5e53}
+      \strng{fullhash}{618ae1771015b3c788bd3804764a801e}
+      \strng{bibnamehash}{618ae1771015b3c788bd3804764a801e}
+      \strng{authorbibnamehash}{618ae1771015b3c788bd3804764a801e}
+      \strng{authornamehash}{ffcb08e3be1f53ca64404ec0dbfe5e53}
+      \strng{authorfullhash}{618ae1771015b3c788bd3804764a801e}
+      \strng{nameabibnamehash}{618ae1771015b3c788bd3804764a801e}
+      \strng{nameanamehash}{ffcb08e3be1f53ca64404ec0dbfe5e53}
+      \strng{nameafullhash}{618ae1771015b3c788bd3804764a801e}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Power Electronics}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{number}{11}
+      \field{title}{High step-up ratio flyback converter with active clamp and voltage multiplier}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{26}
+      \field{year}{2011}
+      \field{dateera}{ce}
+      \field{pages}{3205\bibrangedash 3214}
+      \range{pages}{10}
+      \keyw{spiazzi2011high}
+    \endentry
+    \entry{tarzamni2016full}{article}{}
+      \name{author}{3}{}{%
+        {{hash=e477f3a8dc0e98e0b4e55054920f6706}{%
+           family={Tarzamni},
+           familyi={T\bibinitperiod},
+           given={Hadi},
+           giveni={H\bibinitperiod}}}%
+        {{hash=f7072a967acf08face554a9e466ee1b2}{%
+           family={Babaei},
+           familyi={B\bibinitperiod},
+           given={Ebrahim},
+           giveni={E\bibinitperiod}}}%
+        {{hash=2efe153e4043e3a3b159695eb4f44b92}{%
+           family={Gharehkoushan},
+           familyi={G\bibinitperiod},
+           given={Amirreza\bibnamedelima Zarrin},
+           giveni={A\bibinitperiod\bibinitdelim Z\bibinitperiod}}}%
+      }
+      \name{namea}{3}{}{%
+        {{hash=e477f3a8dc0e98e0b4e55054920f6706}{%
+           family={Tarzamni},
+           familyi={T\bibinitperiod},
+           given={Hadi},
+           giveni={H\bibinitperiod}}}%
+        {{hash=f7072a967acf08face554a9e466ee1b2}{%
+           family={Babaei},
+           familyi={B\bibinitperiod},
+           given={Ebrahim},
+           giveni={E\bibinitperiod}}}%
+        {{hash=2efe153e4043e3a3b159695eb4f44b92}{%
+           family={Gharehkoushan},
+           familyi={G\bibinitperiod},
+           given={Amirreza\bibnamedelima Zarrin},
+           giveni={A\bibinitperiod\bibinitdelim Z\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{c4b9b81c45e825210cc6337aab0c052c}
+      \strng{fullhash}{2ca165531f14196185d2d0764b2d7d2f}
+      \strng{bibnamehash}{2ca165531f14196185d2d0764b2d7d2f}
+      \strng{authorbibnamehash}{2ca165531f14196185d2d0764b2d7d2f}
+      \strng{authornamehash}{c4b9b81c45e825210cc6337aab0c052c}
+      \strng{authorfullhash}{2ca165531f14196185d2d0764b2d7d2f}
+      \strng{nameabibnamehash}{2ca165531f14196185d2d0764b2d7d2f}
+      \strng{nameanamehash}{c4b9b81c45e825210cc6337aab0c052c}
+      \strng{nameafullhash}{2ca165531f14196185d2d0764b2d7d2f}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on industrial electronics}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{number}{2}
+      \field{title}{A full soft-switching ZVZCS flyback converter using an active auxiliary cell}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{64}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{pages}{1123\bibrangedash 1129}
+      \range{pages}{7}
+      \keyw{tarzamni2016full}
+    \endentry
+    \entry{huang2016design}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{hash=1247c111dd1228a91e68b58da225d882}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Xiucheng},
+           giveni={X\bibinitperiod}}}%
+        {{hash=90a5a1b78a6475879eb27af765908653}{%
+           family={Feng},
+           familyi={F\bibinitperiod},
+           given={Junjie},
+           giveni={J\bibinitperiod}}}%
+        {{hash=ff46deea32994b94ace6660a599e5e19}{%
+           family={Du},
+           familyi={D\bibinitperiod},
+           given={Weijing},
+           giveni={W\bibinitperiod}}}%
+        {{hash=02d8c5cf302fff14aa9bdfab2d8c4c7b}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Fred\bibnamedelima C},
+           giveni={F\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=f495cdda14989886bcfdb65c02b7a19d}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Qiang},
+           giveni={Q\bibinitperiod}}}%
+      }
+      \name{namea}{5}{}{%
+        {{hash=1247c111dd1228a91e68b58da225d882}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Xiucheng},
+           giveni={X\bibinitperiod}}}%
+        {{hash=90a5a1b78a6475879eb27af765908653}{%
+           family={Feng},
+           familyi={F\bibinitperiod},
+           given={Junjie},
+           giveni={J\bibinitperiod}}}%
+        {{hash=ff46deea32994b94ace6660a599e5e19}{%
+           family={Du},
+           familyi={D\bibinitperiod},
+           given={Weijing},
+           giveni={W\bibinitperiod}}}%
+        {{hash=02d8c5cf302fff14aa9bdfab2d8c4c7b}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Fred\bibnamedelima C},
+           giveni={F\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=f495cdda14989886bcfdb65c02b7a19d}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Qiang},
+           giveni={Q\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{9ba268f9f0c4bd0a52edfcd535928c31}
+      \strng{fullhash}{4bdea65658095d0306e57d2718197510}
+      \strng{bibnamehash}{589d3dd414189292c9e7fc09197acb6e}
+      \strng{authorbibnamehash}{589d3dd414189292c9e7fc09197acb6e}
+      \strng{authornamehash}{9ba268f9f0c4bd0a52edfcd535928c31}
+      \strng{authorfullhash}{4bdea65658095d0306e57d2718197510}
+      \strng{nameabibnamehash}{589d3dd414189292c9e7fc09197acb6e}
+      \strng{nameanamehash}{9ba268f9f0c4bd0a52edfcd535928c31}
+      \strng{nameafullhash}{4bdea65658095d0306e57d2718197510}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2016 IEEE Applied Power Electronics Conference and Exposition (APEC)}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{Design consideration of MHz active clamp flyback converter with GaN devices for low power adapter application}
+      \field{usera}{C}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{pages}{2334\bibrangedash 2341}
+      \range{pages}{8}
+      \keyw{huang2016design}
+    \endentry
+    \entry{chen2002analysis}{article}{}
+      \name{author}{2}{}{%
+        {{hash=f2013e63372dc6983d747fc9932f5a8f}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={T-M},
+           giveni={T\bibinithyphendelim M\bibinitperiod}}}%
+        {{hash=c0b0bad2aa4b12f81ee2005fd577b22c}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={C-L},
+           giveni={C\bibinithyphendelim L\bibinitperiod}}}%
+      }
+      \name{namea}{2}{}{%
+        {{hash=f2013e63372dc6983d747fc9932f5a8f}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={T-M},
+           giveni={T\bibinithyphendelim M\bibinitperiod}}}%
+        {{hash=c0b0bad2aa4b12f81ee2005fd577b22c}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={C-L},
+           giveni={C\bibinithyphendelim L\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {IET}%
+      }
+      \strng{namehash}{fb7d7dd981508e59063fb3841ee181c0}
+      \strng{fullhash}{8e0c55694b7e1f22c505c5ece6d57361}
+      \strng{bibnamehash}{8e0c55694b7e1f22c505c5ece6d57361}
+      \strng{authorbibnamehash}{8e0c55694b7e1f22c505c5ece6d57361}
+      \strng{authornamehash}{fb7d7dd981508e59063fb3841ee181c0}
+      \strng{authorfullhash}{8e0c55694b7e1f22c505c5ece6d57361}
+      \strng{nameabibnamehash}{8e0c55694b7e1f22c505c5ece6d57361}
+      \strng{nameanamehash}{fb7d7dd981508e59063fb3841ee181c0}
+      \strng{nameafullhash}{8e0c55694b7e1f22c505c5ece6d57361}
+      \field{extraname}{1}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEE Proceedings-Electric Power Applications}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{number}{6}
+      \field{title}{Analysis and design of asymmetrical half bridge flyback converter}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{149}
+      \field{year}{2002}
+      \field{dateera}{ce}
+      \field{pages}{433\bibrangedash 440}
+      \range{pages}{8}
+      \keyw{chen2002analysis}
+    \endentry
+    \entry{kim2012analysis}{article}{}
+      \name{author}{4}{}{%
+        {{hash=a893e3acef71c6c8cd4d9be60c7e2d50}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Ho-Sung},
+           giveni={H\bibinithyphendelim S\bibinitperiod}}}%
+        {{hash=b44243450ca82984ed2285bb347fca2c}{%
+           family={Jung},
+           familyi={J\bibinitperiod},
+           given={Jee-Hoon},
+           giveni={J\bibinithyphendelim H\bibinitperiod}}}%
+        {{hash=6aef2871d636594617766e5c9a009e47}{%
+           family={Baek},
+           familyi={B\bibinitperiod},
+           given={Ju-Won},
+           giveni={J\bibinithyphendelim W\bibinitperiod}}}%
+        {{hash=d8d559f96a1bcdbd733f4408c6cd9b35}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Hee-Je},
+           giveni={H\bibinithyphendelim J\bibinitperiod}}}%
+      }
+      \name{namea}{4}{}{%
+        {{hash=a893e3acef71c6c8cd4d9be60c7e2d50}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Ho-Sung},
+           giveni={H\bibinithyphendelim S\bibinitperiod}}}%
+        {{hash=b44243450ca82984ed2285bb347fca2c}{%
+           family={Jung},
+           familyi={J\bibinitperiod},
+           given={Jee-Hoon},
+           giveni={J\bibinithyphendelim H\bibinitperiod}}}%
+        {{hash=6aef2871d636594617766e5c9a009e47}{%
+           family={Baek},
+           familyi={B\bibinitperiod},
+           given={Ju-Won},
+           giveni={J\bibinithyphendelim W\bibinitperiod}}}%
+        {{hash=d8d559f96a1bcdbd733f4408c6cd9b35}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Hee-Je},
+           giveni={H\bibinithyphendelim J\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{daa9910fdb98fbe50e68b83fe1cf2707}
+      \strng{fullhash}{e34d3541111c8afcb42257bf7204073a}
+      \strng{bibnamehash}{60ef2a87a6b46a383c0dac905254eaa5}
+      \strng{authorbibnamehash}{60ef2a87a6b46a383c0dac905254eaa5}
+      \strng{authornamehash}{daa9910fdb98fbe50e68b83fe1cf2707}
+      \strng{authorfullhash}{e34d3541111c8afcb42257bf7204073a}
+      \strng{nameabibnamehash}{60ef2a87a6b46a383c0dac905254eaa5}
+      \strng{nameanamehash}{daa9910fdb98fbe50e68b83fe1cf2707}
+      \strng{nameafullhash}{e34d3541111c8afcb42257bf7204073a}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Industrial Electronics}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{number}{8}
+      \field{title}{Analysis and design of a multioutput converter using asymmetrical PWM half-bridge flyback converter employing a parallel--series transformer}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{60}
+      \field{year}{2012}
+      \field{dateera}{ce}
+      \field{pages}{3115\bibrangedash 3125}
+      \range{pages}{11}
+      \keyw{kim2012analysis}
+    \endentry
+    \entry{huber2017analysis}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=9cc4a8ccfb7d25e679badb0506a37c4c}{%
+           family={Huber},
+           familyi={H\bibinitperiod},
+           given={Laszlo},
+           giveni={L\bibinitperiod}}}%
+        {{hash=424d1c412572054457d90ddf021cd0d9}{%
+           family={Jovanović},
+           familyi={J\bibinitperiod},
+           given={Milan\bibnamedelima M},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \name{namea}{2}{}{%
+        {{hash=9cc4a8ccfb7d25e679badb0506a37c4c}{%
+           family={Huber},
+           familyi={H\bibinitperiod},
+           given={Laszlo},
+           giveni={L\bibinitperiod}}}%
+        {{hash=424d1c412572054457d90ddf021cd0d9}{%
+           family={Jovanović},
+           familyi={J\bibinitperiod},
+           given={Milan\bibnamedelima M},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{ea31a68b3a50c01c732be13fab9af104}
+      \strng{fullhash}{23e40ed755c688696b62c4e486a82783}
+      \strng{bibnamehash}{23e40ed755c688696b62c4e486a82783}
+      \strng{authorbibnamehash}{23e40ed755c688696b62c4e486a82783}
+      \strng{authornamehash}{ea31a68b3a50c01c732be13fab9af104}
+      \strng{authorfullhash}{23e40ed755c688696b62c4e486a82783}
+      \strng{nameabibnamehash}{23e40ed755c688696b62c4e486a82783}
+      \strng{nameanamehash}{ea31a68b3a50c01c732be13fab9af104}
+      \strng{nameafullhash}{23e40ed755c688696b62c4e486a82783}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2017 IEEE Applied Power Electronics Conference and Exposition (APEC)}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{Analysis, design, and performance evaluation of asymmetrical half-bridge flyback converter for universal-line-voltage-range applications}
+      \field{usera}{C}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{pages}{2481\bibrangedash 2487}
+      \range{pages}{7}
+      \keyw{huber2017analysis}
+    \endentry
+    \entry{seo2000_AHB}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=89247e59d5302f7e65a447f0f6d20f1f}{%
+           family={Seo},
+           familyi={S\bibinitperiod},
+           given={DH},
+           giveni={D\bibinitperiod}}}%
+        {{hash=2ecf88f7c9bada96deceec98a54db1a2}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={OJ},
+           giveni={O\bibinitperiod}}}%
+        {{hash=26b3d5de00a71657a36e7598ce6ef484}{%
+           family={Lim},
+           familyi={L\bibinitperiod},
+           given={SH},
+           giveni={S\bibinitperiod}}}%
+        {{hash=5a8f9fccbcb79c91ef472f912a467c90}{%
+           family={Park},
+           familyi={P\bibinitperiod},
+           given={JS},
+           giveni={J\bibinitperiod}}}%
+      }
+      \name{namea}{4}{}{%
+        {{hash=89247e59d5302f7e65a447f0f6d20f1f}{%
+           family={Seo},
+           familyi={S\bibinitperiod},
+           given={DH},
+           giveni={D\bibinitperiod}}}%
+        {{hash=2ecf88f7c9bada96deceec98a54db1a2}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={OJ},
+           giveni={O\bibinitperiod}}}%
+        {{hash=26b3d5de00a71657a36e7598ce6ef484}{%
+           family={Lim},
+           familyi={L\bibinitperiod},
+           given={SH},
+           giveni={S\bibinitperiod}}}%
+        {{hash=5a8f9fccbcb79c91ef472f912a467c90}{%
+           family={Park},
+           familyi={P\bibinitperiod},
+           given={JS},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{17b7de090afe69d32f3995b295fa46ed}
+      \strng{fullhash}{a344f1bce816b9280719cd53f4026520}
+      \strng{bibnamehash}{d90c62cb2f96b62f81ff9bcdea9e6793}
+      \strng{authorbibnamehash}{d90c62cb2f96b62f81ff9bcdea9e6793}
+      \strng{authornamehash}{17b7de090afe69d32f3995b295fa46ed}
+      \strng{authorfullhash}{a344f1bce816b9280719cd53f4026520}
+      \strng{nameabibnamehash}{d90c62cb2f96b62f81ff9bcdea9e6793}
+      \strng{nameanamehash}{17b7de090afe69d32f3995b295fa46ed}
+      \strng{nameafullhash}{a344f1bce816b9280719cd53f4026520}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2000 IEEE 31st Annual Power Electronics Specialists Conference. Conference Proceedings (Cat. No. 00CH37018)}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{Asymmetrical PWM flyback converter}
+      \field{usera}{C}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{2}
+      \field{year}{2000}
+      \field{dateera}{ce}
+      \field{pages}{848\bibrangedash 852}
+      \range{pages}{5}
+      \keyw{seo2000_AHB}
+    \endentry
+    \entry{chen2002_AHB}{article}{}
+      \name{author}{2}{}{%
+        {{hash=f2013e63372dc6983d747fc9932f5a8f}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={T.-M.},
+           giveni={T\bibinithyphendelim M\bibinitperiod}}}%
+        {{hash=c0b0bad2aa4b12f81ee2005fd577b22c}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={C.-L.},
+           giveni={C\bibinithyphendelim L\bibinitperiod}}}%
+      }
+      \name{namea}{2}{}{%
+        {{hash=f2013e63372dc6983d747fc9932f5a8f}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={T.-M.},
+           giveni={T\bibinithyphendelim M\bibinitperiod}}}%
+        {{hash=c0b0bad2aa4b12f81ee2005fd577b22c}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={C.-L.},
+           giveni={C\bibinithyphendelim L\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{fb7d7dd981508e59063fb3841ee181c0}
+      \strng{fullhash}{8e0c55694b7e1f22c505c5ece6d57361}
+      \strng{bibnamehash}{8e0c55694b7e1f22c505c5ece6d57361}
+      \strng{authorbibnamehash}{8e0c55694b7e1f22c505c5ece6d57361}
+      \strng{authornamehash}{fb7d7dd981508e59063fb3841ee181c0}
+      \strng{authorfullhash}{8e0c55694b7e1f22c505c5ece6d57361}
+      \strng{nameabibnamehash}{8e0c55694b7e1f22c505c5ece6d57361}
+      \strng{nameanamehash}{fb7d7dd981508e59063fb3841ee181c0}
+      \strng{nameafullhash}{8e0c55694b7e1f22c505c5ece6d57361}
+      \field{extraname}{2}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEE Proceedings - Electric Power Applications}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{number}{6}
+      \field{title}{Analysis and design of asymmetrical half bridge flyback converter}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{149}
+      \field{year}{2002}
+      \field{dateera}{ce}
+      \field{pages}{433\bibrangedash 440}
+      \range{pages}{8}
+      \keyw{chen2002_AHB}
+    \endentry
+    \entry{chen2002_AHB1}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=f2ec078537af7fc562d58a1e649df4d6}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Tso-Min},
+           giveni={T\bibinithyphendelim M\bibinitperiod}}}%
+        {{hash=3717e02702bb3c82619b948de43a042c}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Chern-Lin},
+           giveni={C\bibinithyphendelim L\bibinitperiod}}}%
+      }
+      \name{namea}{2}{}{%
+        {{hash=f2ec078537af7fc562d58a1e649df4d6}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Tso-Min},
+           giveni={T\bibinithyphendelim M\bibinitperiod}}}%
+        {{hash=3717e02702bb3c82619b948de43a042c}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Chern-Lin},
+           giveni={C\bibinithyphendelim L\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{2a0a9a259d3b12f1d8115d2982148285}
+      \strng{fullhash}{02cf9cf57f03ef06c77fe867bbc56ca1}
+      \strng{bibnamehash}{02cf9cf57f03ef06c77fe867bbc56ca1}
+      \strng{authorbibnamehash}{02cf9cf57f03ef06c77fe867bbc56ca1}
+      \strng{authornamehash}{2a0a9a259d3b12f1d8115d2982148285}
+      \strng{authorfullhash}{02cf9cf57f03ef06c77fe867bbc56ca1}
+      \strng{nameabibnamehash}{02cf9cf57f03ef06c77fe867bbc56ca1}
+      \strng{nameanamehash}{2a0a9a259d3b12f1d8115d2982148285}
+      \strng{nameafullhash}{02cf9cf57f03ef06c77fe867bbc56ca1}
+      \field{extraname}{3}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2002 IEEE 33rd Annual IEEE Power Electronics Specialists Conference. Proceedings (Cat. No. 02CH37289)}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{Characterization of asymmetrical half bridge flyback converter}
+      \field{usera}{C}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{2}
+      \field{year}{2002}
+      \field{dateera}{ce}
+      \field{pages}{921\bibrangedash 926}
+      \range{pages}{6}
+      \keyw{chen2002_AHB1}
+    \endentry
+    \entry{xu2004_AHB}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=972944cd24c8f928d847f60defd50f90}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Xinyu},
+           giveni={X\bibinitperiod}}}%
+        {{hash=51ec76ada2cff55a41a0d0091329a668}{%
+           family={Khambadkone},
+           familyi={K\bibinitperiod},
+           given={Ashwin\bibnamedelima M},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=bd4673e3cf517be5f0878079ab59d849}{%
+           family={Oruganti},
+           familyi={O\bibinitperiod},
+           given={Ramesh},
+           giveni={R\bibinitperiod}}}%
+      }
+      \name{namea}{3}{}{%
+        {{hash=972944cd24c8f928d847f60defd50f90}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Xinyu},
+           giveni={X\bibinitperiod}}}%
+        {{hash=51ec76ada2cff55a41a0d0091329a668}{%
+           family={Khambadkone},
+           familyi={K\bibinitperiod},
+           given={Ashwin\bibnamedelima M},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=bd4673e3cf517be5f0878079ab59d849}{%
+           family={Oruganti},
+           familyi={O\bibinitperiod},
+           given={Ramesh},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{68f5be13aa930d44ec4144887a06dfd3}
+      \strng{fullhash}{cf3e381699e86f1b6a03b8a2348ceb26}
+      \strng{bibnamehash}{cf3e381699e86f1b6a03b8a2348ceb26}
+      \strng{authorbibnamehash}{cf3e381699e86f1b6a03b8a2348ceb26}
+      \strng{authornamehash}{68f5be13aa930d44ec4144887a06dfd3}
+      \strng{authorfullhash}{cf3e381699e86f1b6a03b8a2348ceb26}
+      \strng{nameabibnamehash}{cf3e381699e86f1b6a03b8a2348ceb26}
+      \strng{nameanamehash}{68f5be13aa930d44ec4144887a06dfd3}
+      \strng{nameafullhash}{cf3e381699e86f1b6a03b8a2348ceb26}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{30th Annual Conference of IEEE Industrial Electronics Society, 2004. IECON 2004}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{An asymmetrical half bridge flyback converter with zero-voltage and zero-current switching}
+      \field{usera}{C}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{1}
+      \field{year}{2004}
+      \field{dateera}{ce}
+      \field{pages}{767\bibrangedash 772}
+      \range{pages}{6}
+      \keyw{xu2004_AHB}
+    \endentry
+    \entry{choi2005_BM1}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=2bc4577f227d66c4ccf434387c653c75}{%
+           family={Choi},
+           familyi={C\bibinitperiod},
+           given={Hang-Seok},
+           giveni={H\bibinithyphendelim S\bibinitperiod}}}%
+        {{hash=5250f8ed6169fe0ed684c6539b7aa70a}{%
+           family={Huh},
+           familyi={H\bibinitperiod},
+           given={DY},
+           giveni={D\bibinitperiod}}}%
+      }
+      \name{namea}{2}{}{%
+        {{hash=2bc4577f227d66c4ccf434387c653c75}{%
+           family={Choi},
+           familyi={C\bibinitperiod},
+           given={Hang-Seok},
+           giveni={H\bibinithyphendelim S\bibinitperiod}}}%
+        {{hash=5250f8ed6169fe0ed684c6539b7aa70a}{%
+           family={Huh},
+           familyi={H\bibinitperiod},
+           given={DY},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{9cc14a1fd57471db62e4ad0813314319}
+      \strng{fullhash}{8b822afb27114db985cd6e7d551719c3}
+      \strng{bibnamehash}{8b822afb27114db985cd6e7d551719c3}
+      \strng{authorbibnamehash}{8b822afb27114db985cd6e7d551719c3}
+      \strng{authornamehash}{9cc14a1fd57471db62e4ad0813314319}
+      \strng{authorfullhash}{8b822afb27114db985cd6e7d551719c3}
+      \strng{nameabibnamehash}{8b822afb27114db985cd6e7d551719c3}
+      \strng{nameanamehash}{9cc14a1fd57471db62e4ad0813314319}
+      \strng{nameafullhash}{8b822afb27114db985cd6e7d551719c3}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2005 IEEE 36th Power Electronics Specialists Conference}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{Techniques to minimize power consumption of SMPS in standby mode}
+      \field{usera}{C}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{year}{2005}
+      \field{dateera}{ce}
+      \field{pages}{2817\bibrangedash 2822}
+      \range{pages}{6}
+      \keyw{choi2005_BM1}
+    \endentry
+    \entry{lo2008_BM2}{article}{}
+      \name{author}{3}{}{%
+        {{hash=013d9841763e44dd463339ab98875389}{%
+           family={Lo},
+           familyi={L\bibinitperiod},
+           given={Yu-Kang},
+           giveni={Y\bibinithyphendelim K\bibinitperiod}}}%
+        {{hash=edfcb46e14df10c37a0b99ba379b5bcf}{%
+           family={Yen},
+           familyi={Y\bibinitperiod},
+           given={Shang-Chin},
+           giveni={S\bibinithyphendelim C\bibinitperiod}}}%
+        {{hash=7a74bfd92a1d25bd300049e2625d7ec6}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Chung-Yi},
+           giveni={C\bibinithyphendelim Y\bibinitperiod}}}%
+      }
+      \name{namea}{3}{}{%
+        {{hash=013d9841763e44dd463339ab98875389}{%
+           family={Lo},
+           familyi={L\bibinitperiod},
+           given={Yu-Kang},
+           giveni={Y\bibinithyphendelim K\bibinitperiod}}}%
+        {{hash=edfcb46e14df10c37a0b99ba379b5bcf}{%
+           family={Yen},
+           familyi={Y\bibinitperiod},
+           given={Shang-Chin},
+           giveni={S\bibinithyphendelim C\bibinitperiod}}}%
+        {{hash=7a74bfd92a1d25bd300049e2625d7ec6}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Chung-Yi},
+           giveni={C\bibinithyphendelim Y\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{d55b0ce66833006a4c91857f4cfbe7dc}
+      \strng{fullhash}{073ee8b595502d1a768bb41f0e015b23}
+      \strng{bibnamehash}{073ee8b595502d1a768bb41f0e015b23}
+      \strng{authorbibnamehash}{073ee8b595502d1a768bb41f0e015b23}
+      \strng{authornamehash}{d55b0ce66833006a4c91857f4cfbe7dc}
+      \strng{authorfullhash}{073ee8b595502d1a768bb41f0e015b23}
+      \strng{nameabibnamehash}{073ee8b595502d1a768bb41f0e015b23}
+      \strng{nameanamehash}{d55b0ce66833006a4c91857f4cfbe7dc}
+      \strng{nameafullhash}{073ee8b595502d1a768bb41f0e015b23}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Industrial Electronics}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{number}{2}
+      \field{title}{A high-efficiency AC-to-DC adaptor with a low standby power consumption}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{55}
+      \field{year}{2008}
+      \field{dateera}{ce}
+      \field{pages}{963\bibrangedash 965}
+      \range{pages}{3}
+      \keyw{lo2008_BM2}
+    \endentry
+    \entry{lin2005_AHB}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=0806a79348cbfd147ec2f73e9469cb30}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Bor-Ren},
+           giveni={B\bibinithyphendelim R\bibinitperiod}}}%
+        {{hash=737d0e939adc109bc1ec8e758fc7d581}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Cheng-Chang},
+           giveni={C\bibinithyphendelim C\bibinitperiod}}}%
+        {{hash=880058aecbe007135ba7481023962f53}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={D},
+           giveni={D\bibinitperiod}}}%
+      }
+      \name{namea}{3}{}{%
+        {{hash=0806a79348cbfd147ec2f73e9469cb30}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Bor-Ren},
+           giveni={B\bibinithyphendelim R\bibinitperiod}}}%
+        {{hash=737d0e939adc109bc1ec8e758fc7d581}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Cheng-Chang},
+           giveni={C\bibinithyphendelim C\bibinitperiod}}}%
+        {{hash=880058aecbe007135ba7481023962f53}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={D},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{116aa178e6c86349882434fa6d283897}
+      \strng{fullhash}{4e06fedfbb99a3a747631818fb8a207d}
+      \strng{bibnamehash}{4e06fedfbb99a3a747631818fb8a207d}
+      \strng{authorbibnamehash}{4e06fedfbb99a3a747631818fb8a207d}
+      \strng{authornamehash}{116aa178e6c86349882434fa6d283897}
+      \strng{authorfullhash}{4e06fedfbb99a3a747631818fb8a207d}
+      \strng{nameabibnamehash}{4e06fedfbb99a3a747631818fb8a207d}
+      \strng{nameanamehash}{116aa178e6c86349882434fa6d283897}
+      \strng{nameafullhash}{4e06fedfbb99a3a747631818fb8a207d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2005 IEEE International Conference on Industrial Technology}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{Analysis, design and implementation of an asymmetrical half-bridge converter}
+      \field{usera}{C}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{year}{2005}
+      \field{dateera}{ce}
+      \field{pages}{1209\bibrangedash 1214}
+      \range{pages}{6}
+      \keyw{lin2005_AHB}
+    \endentry
+    \entry{chen2006_AHB}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=f2ec078537af7fc562d58a1e649df4d6}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Tso-Min},
+           giveni={T\bibinithyphendelim M\bibinitperiod}}}%
+        {{hash=3717e02702bb3c82619b948de43a042c}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Chern-Lin},
+           giveni={C\bibinithyphendelim L\bibinitperiod}}}%
+      }
+      \name{namea}{2}{}{%
+        {{hash=f2ec078537af7fc562d58a1e649df4d6}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Tso-Min},
+           giveni={T\bibinithyphendelim M\bibinitperiod}}}%
+        {{hash=3717e02702bb3c82619b948de43a042c}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Chern-Lin},
+           giveni={C\bibinithyphendelim L\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{2a0a9a259d3b12f1d8115d2982148285}
+      \strng{fullhash}{02cf9cf57f03ef06c77fe867bbc56ca1}
+      \strng{bibnamehash}{02cf9cf57f03ef06c77fe867bbc56ca1}
+      \strng{authorbibnamehash}{02cf9cf57f03ef06c77fe867bbc56ca1}
+      \strng{authornamehash}{2a0a9a259d3b12f1d8115d2982148285}
+      \strng{authorfullhash}{02cf9cf57f03ef06c77fe867bbc56ca1}
+      \strng{nameabibnamehash}{02cf9cf57f03ef06c77fe867bbc56ca1}
+      \strng{nameanamehash}{2a0a9a259d3b12f1d8115d2982148285}
+      \strng{nameafullhash}{02cf9cf57f03ef06c77fe867bbc56ca1}
+      \field{extraname}{4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2006 CES/IEEE 5th International Power Electronics and Motion Control Conference}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{Small-signal modeling of asymmetrical half bridge flyback converter}
+      \field{usera}{C}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{1}
+      \field{year}{2006}
+      \field{dateera}{ce}
+      \field{pages}{1\bibrangedash 5}
+      \range{pages}{5}
+      \keyw{chen2006_AHB}
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 

@@ -14,7 +14,10 @@
 \usepackage{pifont} %使用打钩
 \usepackage{longtable} %显示长表格
 \usepackage{float} % 引入 float 宏包
-
+\usepackage{tabularx} %  实现更灵活的表格宽度控制
+\usepackage{booktabs} %  用于更好看的表格横线样式，可按需选择
+\usepackage{array} % 引入 array 宏包用于调整行间距
+\newcolumntype{C}{>{\centering\arraybackslash}X}
 % 定义 mysubsubsection 标题格式
 % \titleformat{\subsubsection}[block]{\normalsize\normalsize}{(\arabic{subsubsection})}{0.5em}{}[]
 
@@ -33,6 +36,7 @@
 \include{chapters/chapter4}
 \include{chapters/chapter5}
 \include{chapters/chapter6}
+\include{chapters/总结展望}
 % \include{chapters/cp4}
 % \include{chapters/cp5}
 % \include{chapters/cp6}
