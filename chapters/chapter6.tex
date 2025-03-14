@@ -76,15 +76,15 @@
 
 带隙基准模块为整体电路提供稳定的不受PVT影响的偏置电压和偏置电流，其版图的设计是最为关键的一环。电路通过两个三极管产生正温度系数电流，因此三极管的版图匹配极为重要，将两个三极管以3×3的方式排列整齐后外围还需额外加入16个三极管作为dummy器件防止制造中的非理性效应影响三极管。初三极管外电流镜、运放输入对以及电阻的匹配也不可忽视，都需要通过交叉匹配方式实现其误差变化的一致性。最后加入保护环防止发生闩锁效应。
 
-\subsubsection{迟滞比较器}
+\subsubsection{精确谷底导通电路版图}
 
 图~\ref{fig:迟滞比较器电路版图}中为迟滞比较器的版图。
 
 \begin{figure}[htbp] 
     \centering
-    \includegraphics[width=0.5\linewidth]{figures/CLASS-AB.jpg}
-    \caption{迟滞比较器电路版图}
-    \label{fig:迟滞比较器电路版图}
+    \includegraphics[width=0.5\linewidth]{figures/valley_swtich_bantu.png}
+    \caption{精确谷底导通电路版图}
+    \label{fig:精确谷底导通电路版图}
 \end{figure} 
 
 
