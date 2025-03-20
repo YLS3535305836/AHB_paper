@@ -71,3 +71,5 @@ if __name__ == "__main__":
     # target_path = r"D:/文档/陈瑶.pdf"
     target_path = r"D:/小米云盘/毕业相关/LATEX/tamako-paper/zwcpaper.pdf"
     batch_count_pdf_words(target_path)
+
+
