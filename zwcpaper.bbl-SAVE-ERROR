@@ -717,6 +717,7 @@
       \strng{nameabibnamehash}{23e40ed755c688696b62c4e486a82783}
       \strng{nameanamehash}{ea31a68b3a50c01c732be13fab9af104}
       \strng{nameafullhash}{23e40ed755c688696b62c4e486a82783}
+      \field{extraname}{1}
       \field{sortinit}{5}
       \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
@@ -1001,134 +1002,6 @@
       \range{pages}{6}
       \keyw{xu2004_AHB}
     \endentry
-    \entry{choi2005_BM1}{inproceedings}{}
-      \name{author}{2}{}{%
-        {{hash=2bc4577f227d66c4ccf434387c653c75}{%
-           family={Choi},
-           familyi={C\bibinitperiod},
-           given={Hang-Seok},
-           giveni={H\bibinithyphendelim S\bibinitperiod}}}%
-        {{hash=5250f8ed6169fe0ed684c6539b7aa70a}{%
-           family={Huh},
-           familyi={H\bibinitperiod},
-           given={DY},
-           giveni={D\bibinitperiod}}}%
-      }
-      \name{namea}{2}{}{%
-        {{hash=2bc4577f227d66c4ccf434387c653c75}{%
-           family={Choi},
-           familyi={C\bibinitperiod},
-           given={Hang-Seok},
-           giveni={H\bibinithyphendelim S\bibinitperiod}}}%
-        {{hash=5250f8ed6169fe0ed684c6539b7aa70a}{%
-           family={Huh},
-           familyi={H\bibinitperiod},
-           given={DY},
-           giveni={D\bibinitperiod}}}%
-      }
-      \list{language}{1}{%
-        {english}%
-      }
-      \list{organization}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{9cc14a1fd57471db62e4ad0813314319}
-      \strng{fullhash}{8b822afb27114db985cd6e7d551719c3}
-      \strng{bibnamehash}{8b822afb27114db985cd6e7d551719c3}
-      \strng{authorbibnamehash}{8b822afb27114db985cd6e7d551719c3}
-      \strng{authornamehash}{9cc14a1fd57471db62e4ad0813314319}
-      \strng{authorfullhash}{8b822afb27114db985cd6e7d551719c3}
-      \strng{nameabibnamehash}{8b822afb27114db985cd6e7d551719c3}
-      \strng{nameanamehash}{9cc14a1fd57471db62e4ad0813314319}
-      \strng{nameafullhash}{8b822afb27114db985cd6e7d551719c3}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{2005 IEEE 36th Power Electronics Specialists Conference}
-      \field{langid}{english}
-      \field{languageid}{english}
-      \field{lansortorder}{4}
-      \field{title}{Techniques to minimize power consumption of SMPS in standby mode}
-      \field{usera}{C}
-      \field{userd}{english}
-      \field{userf}{english}
-      \field{year}{2005}
-      \field{dateera}{ce}
-      \field{pages}{2817\bibrangedash 2822}
-      \range{pages}{6}
-      \keyw{choi2005_BM1}
-    \endentry
-    \entry{lo2008_BM2}{article}{}
-      \name{author}{3}{}{%
-        {{hash=013d9841763e44dd463339ab98875389}{%
-           family={Lo},
-           familyi={L\bibinitperiod},
-           given={Yu-Kang},
-           giveni={Y\bibinithyphendelim K\bibinitperiod}}}%
-        {{hash=edfcb46e14df10c37a0b99ba379b5bcf}{%
-           family={Yen},
-           familyi={Y\bibinitperiod},
-           given={Shang-Chin},
-           giveni={S\bibinithyphendelim C\bibinitperiod}}}%
-        {{hash=7a74bfd92a1d25bd300049e2625d7ec6}{%
-           family={Lin},
-           familyi={L\bibinitperiod},
-           given={Chung-Yi},
-           giveni={C\bibinithyphendelim Y\bibinitperiod}}}%
-      }
-      \name{namea}{3}{}{%
-        {{hash=013d9841763e44dd463339ab98875389}{%
-           family={Lo},
-           familyi={L\bibinitperiod},
-           given={Yu-Kang},
-           giveni={Y\bibinithyphendelim K\bibinitperiod}}}%
-        {{hash=edfcb46e14df10c37a0b99ba379b5bcf}{%
-           family={Yen},
-           familyi={Y\bibinitperiod},
-           given={Shang-Chin},
-           giveni={S\bibinithyphendelim C\bibinitperiod}}}%
-        {{hash=7a74bfd92a1d25bd300049e2625d7ec6}{%
-           family={Lin},
-           familyi={L\bibinitperiod},
-           given={Chung-Yi},
-           giveni={C\bibinithyphendelim Y\bibinitperiod}}}%
-      }
-      \list{language}{1}{%
-        {english}%
-      }
-      \list{publisher}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{d55b0ce66833006a4c91857f4cfbe7dc}
-      \strng{fullhash}{073ee8b595502d1a768bb41f0e015b23}
-      \strng{bibnamehash}{073ee8b595502d1a768bb41f0e015b23}
-      \strng{authorbibnamehash}{073ee8b595502d1a768bb41f0e015b23}
-      \strng{authornamehash}{d55b0ce66833006a4c91857f4cfbe7dc}
-      \strng{authorfullhash}{073ee8b595502d1a768bb41f0e015b23}
-      \strng{nameabibnamehash}{073ee8b595502d1a768bb41f0e015b23}
-      \strng{nameanamehash}{d55b0ce66833006a4c91857f4cfbe7dc}
-      \strng{nameafullhash}{073ee8b595502d1a768bb41f0e015b23}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{IEEE Transactions on Industrial Electronics}
-      \field{langid}{english}
-      \field{languageid}{english}
-      \field{lansortorder}{4}
-      \field{number}{2}
-      \field{title}{A high-efficiency AC-to-DC adaptor with a low standby power consumption}
-      \field{usera}{J}
-      \field{userd}{english}
-      \field{userf}{english}
-      \field{volume}{55}
-      \field{year}{2008}
-      \field{dateera}{ce}
-      \field{pages}{963\bibrangedash 965}
-      \range{pages}{3}
-      \keyw{lo2008_BM2}
-    \endentry
     \entry{lin2005_AHB}{inproceedings}{}
       \name{author}{3}{}{%
         {{hash=0806a79348cbfd147ec2f73e9469cb30}{%
@@ -1179,8 +1052,8 @@
       \strng{nameabibnamehash}{4e06fedfbb99a3a747631818fb8a207d}
       \strng{nameanamehash}{116aa178e6c86349882434fa6d283897}
       \strng{nameafullhash}{4e06fedfbb99a3a747631818fb8a207d}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2005 IEEE International Conference on Industrial Technology}
@@ -1256,6 +1129,641 @@
       \field{pages}{1\bibrangedash 5}
       \range{pages}{5}
       \keyw{chen2006_AHB}
+    \endentry
+    \entry{jung2011_AHB}{article}{}
+      \name{author}{1}{}{%
+        {{hash=b44243450ca82984ed2285bb347fca2c}{%
+           family={Jung},
+           familyi={J\bibinitperiod},
+           given={Jee-Hoon},
+           giveni={J\bibinithyphendelim H\bibinitperiod}}}%
+      }
+      \name{namea}{1}{}{%
+        {{hash=b44243450ca82984ed2285bb347fca2c}{%
+           family={Jung},
+           familyi={J\bibinitperiod},
+           given={Jee-Hoon},
+           giveni={J\bibinithyphendelim H\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{b44243450ca82984ed2285bb347fca2c}
+      \strng{fullhash}{b44243450ca82984ed2285bb347fca2c}
+      \strng{bibnamehash}{b44243450ca82984ed2285bb347fca2c}
+      \strng{authorbibnamehash}{b44243450ca82984ed2285bb347fca2c}
+      \strng{authornamehash}{b44243450ca82984ed2285bb347fca2c}
+      \strng{authorfullhash}{b44243450ca82984ed2285bb347fca2c}
+      \strng{nameabibnamehash}{b44243450ca82984ed2285bb347fca2c}
+      \strng{nameanamehash}{b44243450ca82984ed2285bb347fca2c}
+      \strng{nameafullhash}{b44243450ca82984ed2285bb347fca2c}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE transactions on power electronics}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{number}{1}
+      \field{title}{Feed-forward compensator of operating frequency for APWM HB flyback converter}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{27}
+      \field{year}{2011}
+      \field{dateera}{ce}
+      \field{pages}{211\bibrangedash 223}
+      \range{pages}{13}
+      \keyw{jung2011_AHB}
+    \endentry
+    \entry{buso2014_AHB}{article}{}
+      \name{author}{3}{}{%
+        {{hash=1abc9ca226e1140d5708905449566e97}{%
+           family={Buso},
+           familyi={B\bibinitperiod},
+           given={Simone},
+           giveni={S\bibinitperiod}}}%
+        {{hash=391109d2d1933fd210b1558edf59e69e}{%
+           family={Spiazzi},
+           familyi={S\bibinitperiod},
+           given={Giorgio},
+           giveni={G\bibinitperiod}}}%
+        {{hash=9756c4ac344a0553babb246eae03022d}{%
+           family={Sichirollo},
+           familyi={S\bibinitperiod},
+           given={Francesco},
+           giveni={F\bibinitperiod}}}%
+      }
+      \name{namea}{3}{}{%
+        {{hash=1abc9ca226e1140d5708905449566e97}{%
+           family={Buso},
+           familyi={B\bibinitperiod},
+           given={Simone},
+           giveni={S\bibinitperiod}}}%
+        {{hash=391109d2d1933fd210b1558edf59e69e}{%
+           family={Spiazzi},
+           familyi={S\bibinitperiod},
+           given={Giorgio},
+           giveni={G\bibinitperiod}}}%
+        {{hash=9756c4ac344a0553babb246eae03022d}{%
+           family={Sichirollo},
+           familyi={S\bibinitperiod},
+           given={Francesco},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{172d45e874c0e0b92075ffa56ef34a55}
+      \strng{fullhash}{7073e86042b8685bf75e5213fa6f362a}
+      \strng{bibnamehash}{7073e86042b8685bf75e5213fa6f362a}
+      \strng{authorbibnamehash}{7073e86042b8685bf75e5213fa6f362a}
+      \strng{authornamehash}{172d45e874c0e0b92075ffa56ef34a55}
+      \strng{authorfullhash}{7073e86042b8685bf75e5213fa6f362a}
+      \strng{nameabibnamehash}{7073e86042b8685bf75e5213fa6f362a}
+      \strng{nameanamehash}{172d45e874c0e0b92075ffa56ef34a55}
+      \strng{nameafullhash}{7073e86042b8685bf75e5213fa6f362a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Industrial Electronics}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{number}{12}
+      \field{title}{Study of the asymmetrical half-bridge flyback converter as an effective line-fed solid-state lamp driver}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{61}
+      \field{year}{2014}
+      \field{dateera}{ce}
+      \field{pages}{6730\bibrangedash 6738}
+      \range{pages}{9}
+      \keyw{buso2014_AHB}
+    \endentry
+    \entry{huber2017_AHB}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=9cc4a8ccfb7d25e679badb0506a37c4c}{%
+           family={Huber},
+           familyi={H\bibinitperiod},
+           given={Laszlo},
+           giveni={L\bibinitperiod}}}%
+        {{hash=424d1c412572054457d90ddf021cd0d9}{%
+           family={Jovanović},
+           familyi={J\bibinitperiod},
+           given={Milan\bibnamedelima M},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \name{namea}{2}{}{%
+        {{hash=9cc4a8ccfb7d25e679badb0506a37c4c}{%
+           family={Huber},
+           familyi={H\bibinitperiod},
+           given={Laszlo},
+           giveni={L\bibinitperiod}}}%
+        {{hash=424d1c412572054457d90ddf021cd0d9}{%
+           family={Jovanović},
+           familyi={J\bibinitperiod},
+           given={Milan\bibnamedelima M},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{ea31a68b3a50c01c732be13fab9af104}
+      \strng{fullhash}{23e40ed755c688696b62c4e486a82783}
+      \strng{bibnamehash}{23e40ed755c688696b62c4e486a82783}
+      \strng{authorbibnamehash}{23e40ed755c688696b62c4e486a82783}
+      \strng{authornamehash}{ea31a68b3a50c01c732be13fab9af104}
+      \strng{authorfullhash}{23e40ed755c688696b62c4e486a82783}
+      \strng{nameabibnamehash}{23e40ed755c688696b62c4e486a82783}
+      \strng{nameanamehash}{ea31a68b3a50c01c732be13fab9af104}
+      \strng{nameafullhash}{23e40ed755c688696b62c4e486a82783}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2017 IEEE Applied Power Electronics Conference and Exposition (APEC)}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{Analysis, design, and performance evaluation of asymmetrical half-bridge flyback converter for universal-line-voltage-range applications}
+      \field{usera}{C}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{pages}{2481\bibrangedash 2487}
+      \range{pages}{7}
+      \keyw{huber2017_AHB}
+    \endentry
+    \entry{choi2005_BM1}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=2bc4577f227d66c4ccf434387c653c75}{%
+           family={Choi},
+           familyi={C\bibinitperiod},
+           given={Hang-Seok},
+           giveni={H\bibinithyphendelim S\bibinitperiod}}}%
+        {{hash=5250f8ed6169fe0ed684c6539b7aa70a}{%
+           family={Huh},
+           familyi={H\bibinitperiod},
+           given={DY},
+           giveni={D\bibinitperiod}}}%
+      }
+      \name{namea}{2}{}{%
+        {{hash=2bc4577f227d66c4ccf434387c653c75}{%
+           family={Choi},
+           familyi={C\bibinitperiod},
+           given={Hang-Seok},
+           giveni={H\bibinithyphendelim S\bibinitperiod}}}%
+        {{hash=5250f8ed6169fe0ed684c6539b7aa70a}{%
+           family={Huh},
+           familyi={H\bibinitperiod},
+           given={DY},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{9cc14a1fd57471db62e4ad0813314319}
+      \strng{fullhash}{8b822afb27114db985cd6e7d551719c3}
+      \strng{bibnamehash}{8b822afb27114db985cd6e7d551719c3}
+      \strng{authorbibnamehash}{8b822afb27114db985cd6e7d551719c3}
+      \strng{authornamehash}{9cc14a1fd57471db62e4ad0813314319}
+      \strng{authorfullhash}{8b822afb27114db985cd6e7d551719c3}
+      \strng{nameabibnamehash}{8b822afb27114db985cd6e7d551719c3}
+      \strng{nameanamehash}{9cc14a1fd57471db62e4ad0813314319}
+      \strng{nameafullhash}{8b822afb27114db985cd6e7d551719c3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2005 IEEE 36th Power Electronics Specialists Conference}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{Techniques to minimize power consumption of SMPS in standby mode}
+      \field{usera}{C}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{year}{2005}
+      \field{dateera}{ce}
+      \field{pages}{2817\bibrangedash 2822}
+      \range{pages}{6}
+      \keyw{choi2005_BM1}
+    \endentry
+    \entry{lo2008_BM2}{article}{}
+      \name{author}{3}{}{%
+        {{hash=013d9841763e44dd463339ab98875389}{%
+           family={Lo},
+           familyi={L\bibinitperiod},
+           given={Yu-Kang},
+           giveni={Y\bibinithyphendelim K\bibinitperiod}}}%
+        {{hash=edfcb46e14df10c37a0b99ba379b5bcf}{%
+           family={Yen},
+           familyi={Y\bibinitperiod},
+           given={Shang-Chin},
+           giveni={S\bibinithyphendelim C\bibinitperiod}}}%
+        {{hash=7a74bfd92a1d25bd300049e2625d7ec6}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Chung-Yi},
+           giveni={C\bibinithyphendelim Y\bibinitperiod}}}%
+      }
+      \name{namea}{3}{}{%
+        {{hash=013d9841763e44dd463339ab98875389}{%
+           family={Lo},
+           familyi={L\bibinitperiod},
+           given={Yu-Kang},
+           giveni={Y\bibinithyphendelim K\bibinitperiod}}}%
+        {{hash=edfcb46e14df10c37a0b99ba379b5bcf}{%
+           family={Yen},
+           familyi={Y\bibinitperiod},
+           given={Shang-Chin},
+           giveni={S\bibinithyphendelim C\bibinitperiod}}}%
+        {{hash=7a74bfd92a1d25bd300049e2625d7ec6}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Chung-Yi},
+           giveni={C\bibinithyphendelim Y\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{d55b0ce66833006a4c91857f4cfbe7dc}
+      \strng{fullhash}{073ee8b595502d1a768bb41f0e015b23}
+      \strng{bibnamehash}{073ee8b595502d1a768bb41f0e015b23}
+      \strng{authorbibnamehash}{073ee8b595502d1a768bb41f0e015b23}
+      \strng{authornamehash}{d55b0ce66833006a4c91857f4cfbe7dc}
+      \strng{authorfullhash}{073ee8b595502d1a768bb41f0e015b23}
+      \strng{nameabibnamehash}{073ee8b595502d1a768bb41f0e015b23}
+      \strng{nameanamehash}{d55b0ce66833006a4c91857f4cfbe7dc}
+      \strng{nameafullhash}{073ee8b595502d1a768bb41f0e015b23}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Industrial Electronics}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{number}{2}
+      \field{title}{A high-efficiency AC-to-DC adaptor with a low standby power consumption}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{55}
+      \field{year}{2008}
+      \field{dateera}{ce}
+      \field{pages}{963\bibrangedash 965}
+      \range{pages}{3}
+      \keyw{lo2008_BM2}
+    \endentry
+    \entry{董海鹰2013}{article}{}
+      \name{author}{3}{}{%
+        {{hash=f24862f1b88758d03a499064f1622d3b}{%
+           family={董海鹰},
+           familyi={董\bibinitperiod}}}%
+        {{hash=e15a788d9bb3e5ef6d1123ae1f867fca}{%
+           family={李晓青},
+           familyi={李\bibinitperiod}}}%
+        {{hash=93016ead42ceb0a7a4d1801cf4a60369}{%
+           family={李坦},
+           familyi={李\bibinitperiod}}}%
+      }
+      \name{namea}{3}{}{%
+        {{hash=f24862f1b88758d03a499064f1622d3b}{%
+           family={董海鹰},
+           familyi={董\bibinitperiod}}}%
+        {{hash=e15a788d9bb3e5ef6d1123ae1f867fca}{%
+           family={李晓青},
+           familyi={李\bibinitperiod}}}%
+        {{hash=93016ead42ceb0a7a4d1801cf4a60369}{%
+           family={李坦},
+           familyi={李\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {chinese}%
+      }
+      \strng{namehash}{e6bbbe12138598edf0381546699bf0bc}
+      \strng{fullhash}{8c149ba66760a90ae27579aa161c6e14}
+      \strng{bibnamehash}{8c149ba66760a90ae27579aa161c6e14}
+      \strng{authorbibnamehash}{8c149ba66760a90ae27579aa161c6e14}
+      \strng{authornamehash}{e6bbbe12138598edf0381546699bf0bc}
+      \strng{authorfullhash}{8c149ba66760a90ae27579aa161c6e14}
+      \strng{nameabibnamehash}{8c149ba66760a90ae27579aa161c6e14}
+      \strng{nameanamehash}{e6bbbe12138598edf0381546699bf0bc}
+      \strng{nameafullhash}{8c149ba66760a90ae27579aa161c6e14}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{电源技术}
+      \field{langid}{english}
+      \field{languageid}{chinese}
+      \field{lansortorder}{1}
+      \field{number}{4}
+      \field{title}{单端反激式开关电源反馈回路的补偿控制}
+      \field{usera}{J}
+      \field{userd}{chinese}
+      \field{userf}{chinese}
+      \field{volume}{37}
+      \field{year}{2013}
+      \field{dateera}{ce}
+      \field{pages}{624\bibrangedash 627}
+      \range{pages}{4}
+      \keyw{董海鹰2013}
+    \endentry
+    \entry{吴梦麟2019}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=e3ba4e35d33e59d4e676afc92f7f9a80}{%
+           family={吴梦麟},
+           familyi={吴\bibinitperiod}}}%
+      }
+      \name{namea}{1}{}{%
+        {{hash=e3ba4e35d33e59d4e676afc92f7f9a80}{%
+           family={吴梦麟},
+           familyi={吴\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {东南大学}%
+      }
+      \list{language}{1}{%
+        {chinese}%
+      }
+      \strng{namehash}{e3ba4e35d33e59d4e676afc92f7f9a80}
+      \strng{fullhash}{e3ba4e35d33e59d4e676afc92f7f9a80}
+      \strng{bibnamehash}{e3ba4e35d33e59d4e676afc92f7f9a80}
+      \strng{authorbibnamehash}{e3ba4e35d33e59d4e676afc92f7f9a80}
+      \strng{authornamehash}{e3ba4e35d33e59d4e676afc92f7f9a80}
+      \strng{authorfullhash}{e3ba4e35d33e59d4e676afc92f7f9a80}
+      \strng{nameabibnamehash}{e3ba4e35d33e59d4e676afc92f7f9a80}
+      \strng{nameanamehash}{e3ba4e35d33e59d4e676afc92f7f9a80}
+      \strng{nameafullhash}{e3ba4e35d33e59d4e676afc92f7f9a80}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{languageid}{chinese}
+      \field{lansortorder}{1}
+      \field{title}{一种基于原边反馈高精度恒压恒流反激式 AC-DC 变换器设计}
+      \field{type}{mathesis}
+      \field{usera}{D}
+      \field{userd}{chinese}
+      \field{userf}{chinese}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \keyw{吴梦麟2019}
+    \endentry
+    \entry{陈瑶2023}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=af785981157abb3c84fb63a00ca915dc}{%
+           family={陈瑶},
+           familyi={陈\bibinitperiod}}}%
+      }
+      \name{namea}{1}{}{%
+        {{hash=af785981157abb3c84fb63a00ca915dc}{%
+           family={陈瑶},
+           familyi={陈\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {西安电子科技大学}%
+      }
+      \list{language}{1}{%
+        {chinese}%
+      }
+      \strng{namehash}{af785981157abb3c84fb63a00ca915dc}
+      \strng{fullhash}{af785981157abb3c84fb63a00ca915dc}
+      \strng{bibnamehash}{af785981157abb3c84fb63a00ca915dc}
+      \strng{authorbibnamehash}{af785981157abb3c84fb63a00ca915dc}
+      \strng{authornamehash}{af785981157abb3c84fb63a00ca915dc}
+      \strng{authorfullhash}{af785981157abb3c84fb63a00ca915dc}
+      \strng{nameabibnamehash}{af785981157abb3c84fb63a00ca915dc}
+      \strng{nameanamehash}{af785981157abb3c84fb63a00ca915dc}
+      \strng{nameafullhash}{af785981157abb3c84fb63a00ca915dc}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{languageid}{chinese}
+      \field{lansortorder}{1}
+      \field{title}{反激式原边反馈双模式电源管理芯片设计}
+      \field{type}{mathesis}
+      \field{usera}{D}
+      \field{userd}{chinese}
+      \field{userf}{chinese}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \keyw{陈瑶2023}
+    \endentry
+    \entry{medina2021advanced}{article}{}
+      \name{author}{4}{}{%
+        {{hash=a5b098ecc13d0d14fec8654f44cce9d6}{%
+           family={Medina-Garcia},
+           familyi={M\bibinithyphendelim G\bibinitperiod},
+           given={Alfredo},
+           giveni={A\bibinitperiod}}}%
+        {{hash=e2e3d0ef3f7f73b71fbd198b031d513a}{%
+           family={Romero},
+           familyi={R\bibinitperiod},
+           given={Francisco\bibnamedelima J},
+           giveni={F\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=ef1416498631dae44f1bf58cd3244c06}{%
+           family={Morales},
+           familyi={M\bibinitperiod},
+           given={Diego\bibnamedelima P},
+           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=c39b8ab4b358c23eac65d9e129270758}{%
+           family={Rodriguez},
+           familyi={R\bibinitperiod},
+           given={Noel},
+           giveni={N\bibinitperiod}}}%
+      }
+      \name{namea}{4}{}{%
+        {{hash=a5b098ecc13d0d14fec8654f44cce9d6}{%
+           family={Medina-Garcia},
+           familyi={M\bibinithyphendelim G\bibinitperiod},
+           given={Alfredo},
+           giveni={A\bibinitperiod}}}%
+        {{hash=e2e3d0ef3f7f73b71fbd198b031d513a}{%
+           family={Romero},
+           familyi={R\bibinitperiod},
+           given={Francisco\bibnamedelima J},
+           giveni={F\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=ef1416498631dae44f1bf58cd3244c06}{%
+           family={Morales},
+           familyi={M\bibinitperiod},
+           given={Diego\bibnamedelima P},
+           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=c39b8ab4b358c23eac65d9e129270758}{%
+           family={Rodriguez},
+           familyi={R\bibinitperiod},
+           given={Noel},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{9280ad13f69ecc3aa10e033beb182129}
+      \strng{fullhash}{527ff1b1fbdeb4f7a5a5c3ed76fef9ba}
+      \strng{bibnamehash}{339f57bebd7b6d1316c863075aef020e}
+      \strng{authorbibnamehash}{339f57bebd7b6d1316c863075aef020e}
+      \strng{authornamehash}{9280ad13f69ecc3aa10e033beb182129}
+      \strng{authorfullhash}{527ff1b1fbdeb4f7a5a5c3ed76fef9ba}
+      \strng{nameabibnamehash}{339f57bebd7b6d1316c863075aef020e}
+      \strng{nameanamehash}{9280ad13f69ecc3aa10e033beb182129}
+      \strng{nameafullhash}{527ff1b1fbdeb4f7a5a5c3ed76fef9ba}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Power Electronics}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{number}{11}
+      \field{title}{Advanced control methods for asymmetrical half-bridge flyback}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{36}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{pages}{13139\bibrangedash 13148}
+      \range{pages}{10}
+      \keyw{medina2021advanced}
+    \endentry
+    \entry{lee2020high_bg}{article}{}
+      \name{author}{7}{}{%
+        {{hash=af5c660ae461ab63f6cec5b3d33de389}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Chang-Chi},
+           giveni={C\bibinithyphendelim C\bibinitperiod}}}%
+        {{hash=362ebe5a15325c5ee3735f5cdc6d020a}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Hou-Ming},
+           giveni={H\bibinithyphendelim M\bibinitperiod}}}%
+        {{hash=aa6b66e1689a820f510c403dfe4baa7e}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Chi-Chang},
+           giveni={C\bibinithyphendelim C\bibinitperiod}}}%
+        {{hash=fdeec14512a34039596c46172244783e}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Bo-Yi},
+           giveni={B\bibinithyphendelim Y\bibinitperiod}}}%
+        {{hash=22181a48f3e5ddbdc4e7a7008af7ddb6}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Hsien-Chi},
+           giveni={H\bibinithyphendelim C\bibinitperiod}}}%
+        {{hash=1d8da3d67873f1912bea1349510c106f}{%
+           family={Fu},
+           familyi={F\bibinitperiod},
+           given={He-Sheng},
+           giveni={H\bibinithyphendelim S\bibinitperiod}}}%
+        {{hash=01ec34dea645ad4a3d7e67c3a37a4111}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Yong-Xin},
+           giveni={Y\bibinithyphendelim X\bibinitperiod}}}%
+      }
+      \name{namea}{7}{}{%
+        {{hash=af5c660ae461ab63f6cec5b3d33de389}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Chang-Chi},
+           giveni={C\bibinithyphendelim C\bibinitperiod}}}%
+        {{hash=362ebe5a15325c5ee3735f5cdc6d020a}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Hou-Ming},
+           giveni={H\bibinithyphendelim M\bibinitperiod}}}%
+        {{hash=aa6b66e1689a820f510c403dfe4baa7e}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Chi-Chang},
+           giveni={C\bibinithyphendelim C\bibinitperiod}}}%
+        {{hash=fdeec14512a34039596c46172244783e}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Bo-Yi},
+           giveni={B\bibinithyphendelim Y\bibinitperiod}}}%
+        {{hash=22181a48f3e5ddbdc4e7a7008af7ddb6}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Hsien-Chi},
+           giveni={H\bibinithyphendelim C\bibinitperiod}}}%
+        {{hash=1d8da3d67873f1912bea1349510c106f}{%
+           family={Fu},
+           familyi={F\bibinitperiod},
+           given={He-Sheng},
+           giveni={H\bibinithyphendelim S\bibinitperiod}}}%
+        {{hash=01ec34dea645ad4a3d7e67c3a37a4111}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Yong-Xin},
+           giveni={Y\bibinithyphendelim X\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{d14471a88d9e8e1ba2f52306d24f2c9f}
+      \strng{fullhash}{9042b609f62959978b4bb8813ba94e60}
+      \strng{bibnamehash}{71b68b5b02670669ef84334d2d6af26c}
+      \strng{authorbibnamehash}{71b68b5b02670669ef84334d2d6af26c}
+      \strng{authornamehash}{d14471a88d9e8e1ba2f52306d24f2c9f}
+      \strng{authorfullhash}{9042b609f62959978b4bb8813ba94e60}
+      \strng{nameabibnamehash}{71b68b5b02670669ef84334d2d6af26c}
+      \strng{nameanamehash}{d14471a88d9e8e1ba2f52306d24f2c9f}
+      \strng{nameafullhash}{9042b609f62959978b4bb8813ba94e60}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Access}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{A high-precision bandgap reference with a V-curve correction circuit}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{8}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{pages}{62632\bibrangedash 62638}
+      \range{pages}{7}
+      \keyw{lee2020high_bg}
     \endentry
   \enddatalist
 \endrefsection
