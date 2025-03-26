@@ -44,14 +44,14 @@ $I_s$是PN结饱和电流，公式为：
     \label{eq:△Vbe公式}
     \varDelta V_{be} = V_T ln(\frac{I_c}{I_s}) - V_T ln(\frac{I_c}{nI_s}) = V_T \cdot ln(n)
 \end{equation}
-通过$\varDelta V_{be}$对温度求偏导可计算得正的温度系数公式：
+通过$\varDelta V_{be}$对温度求偏导可计算得正温度系数公式：
 \begin{equation}
     \label{eq:△Vbe/T公式}
     \frac{\partial \varDelta V_{be}}{\partial T} = \frac{k}{q}\cdot ln(n)
 \end{equation}
 
 
-由式\eqref{eq:Vbe/T公式}和\eqref{eq:△Vbe/T公式}计算可知，在常温T=300K的条件下，当$V_{be}\thickapprox $ 750 mV时，$V_{be}$的负温度系数约等于-1.5 mV/K，$\varDelta V_{be}$的正温度系数为0.087ln(n) mV/K。为了合理地产生零温度系数电压，防止双极型晶体管的面积太大，需对正负温度系数加权相加可得。
+由式\eqref{eq:Vbe/T公式}和\eqref{eq:△Vbe/T公式}计算可知，在常温T=300K的条件下，当$V_{be}\thickapprox $ 750 mV时，$V_{be}$的负温度系数约等于-1.5 mV/K，$\varDelta V_{be}$的正温度系数为0.087ln(n) mV/K。为了合理地产生零温度系数电压，防止双极型晶体管的面积太大，需对正负温度系数加权相加后计算得带隙基准电压。
 
 为了满足变换器芯片中的低压数字模块，
 
