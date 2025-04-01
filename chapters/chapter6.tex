@@ -30,19 +30,24 @@
 
 \subsubsection{重载工况仿真}
 
-图~\ref{fig:重载工况仿真波形图}显示为恒压控制模式中满载情况下的电路仿真波形图，系统额定输出电压设定为20V。
+\begin{figure}[htbp] 
+    \centering
+    \setlength{\belowcaptionskip}{5pt}
+    \subcaptionbox{20V/5A\label{fig:20V_5A仿真图}}{\includegraphics[width = 0.475\linewidth]{figures/5A1_polt.png}}
+	\subcaptionbox{5V/5A\label{fig:5V_5A仿真图}}{\includegraphics[width = 0.495\linewidth]{figures/5V_5A.png}} 
+    \caption{重载电路仿真波形图}
+    \label{fig:重载工况仿真波形图}
+\end{figure}
+
+图~\ref{fig:重载工况仿真波形图}显示为恒压控制模式中重载情况下的电路仿真波形图，系统额定输出电压分别设定为设定为20V/5A和5V/5A。
 由仿真图可见，在高输出电压和大负载电流情况下，系统工作在CRM模式，高低边功率管连续交替导通，每个开关周期在变压器原副边能量传递完成，副边电流$I_{sec}$降为0A时结束，经过短暂死区时间后开启新的开关周期。最终平均输出电压稳定在19.98V，输出平均电流为5A，副边反馈电压$V_{FB}$稳定在3.79V。
+当在低输出电压下时，为了实现更高的传递效率，仍工作在RVS模式，在$V_{HB}$的第一个谷底处开启新的开关周期，降低开关频率。输出电压稳定在4.974V，电压$V_{FB}$稳定在2.72V。
 
 
 
 图~\ref{fig:重载工况单周期仿真波形图}是图~\ref{fig:重载工况仿真波形图}单个周期内电路仿真波形图，通过对单个开关周期的放大可以观察到，电路完成了在退磁完成时刻关闭低边功率管的功能，且半桥节点电压$V_{HB}$在死区时间内在负向原边电感电流的充能下被抬升至输入电压大小，实现CRM模式下的功率管软开关技术，当高边功率管零电压导通时，电感电流采样电阻电压$V_{CS}$并未出现电压尖峰，电路性能良好。
 
-\begin{figure}[htbp] 
-    \centering
-    \includegraphics[width=0.8\linewidth]{figures/5A1_polt.png}
-    \caption{满载电路仿真波形图}
-    \label{fig:重载工况仿真波形图}
-\end{figure} 
+
 
 \begin{figure}[H] 
     \centering
@@ -69,10 +74,10 @@
 \begin{figure}[htbp] 
     \centering
     \setlength{\belowcaptionskip}{5pt}
-    \subcaptionbox{20V/1A\label{fig:20V_1A仿真图}}{\includegraphics[width = 0.45\linewidth]{figures/20V_1A.png}}
-	\subcaptionbox{20V/1.5A\label{fig:20V_1.5A仿真图}}{\includegraphics[width = 0.45\linewidth]{figures/20V_1.5A.png}} 
-    \subcaptionbox{20V/2A\label{fig:20V_2A仿真图}}{\includegraphics[width = 0.45\linewidth]{figures/20V_2A.png}}
-	\subcaptionbox{20V/2.5A\label{fig:20V_2.5A仿真图}}{\includegraphics[width = 0.45\linewidth]{figures/20V_2.5A.png}} 
+    \subcaptionbox{20V/1A\label{fig:20V_1A仿真图}}{\includegraphics[width = 0.49\linewidth]{figures/20V_1A.png}}
+	\subcaptionbox{20V/1.5A\label{fig:20V_1.5A仿真图}}{\includegraphics[width = 0.49\linewidth]{figures/20V_1.5A.png}} 
+    \subcaptionbox{20V/2A\label{fig:20V_2A仿真图}}{\includegraphics[width = 0.49\linewidth]{figures/20V_2A.png}}
+	\subcaptionbox{20V/2.5A\label{fig:20V_2.5A仿真图}}{\includegraphics[width = 0.49\linewidth]{figures/20V_2.5A.png}} 
     \caption{轻载不同负载电流仿真波形图}
     \label{fig:轻载不同负载仿真波形图}
 \end{figure}
@@ -98,14 +103,17 @@
 
 \subsubsection{模式切换}
 
+
 \begin{figure}[htbp] 
     \centering
-    \includegraphics[width=0.8\linewidth]{figures/2.5A_5A.png}
-    \caption{负载2.5-5A跳变仿真波形图}
-    \label{fig:负载2.5_5A跳变仿真波形图}
-\end{figure} 
+    \setlength{\belowcaptionskip}{5pt}
+    \subcaptionbox{2.5A $\sim$ 5A\label{fig:2.5A-5A仿真图}}{\includegraphics[width = 0.45\linewidth]{figures/2.5A_5A.png}}
+	\subcaptionbox{5A $\sim$ 2A \label{fig:5A-2A仿真图}}{\includegraphics[width = 0.45\linewidth]{figures/5A_ 2A.png}} 
+    \caption{模式切换仿真波形图}
+    \label{fig:模式切换仿真波形图}
+\end{figure}
 
-图~\ref{fig:负载2.5_5A跳变仿真波形图}是非对称半桥反激式变换器恒压控制模式下的输出负载电流从2.5A跳变到5A的仿真波形图。可以观察到在2.5A的负载电流下，电路工作在RVS工作模式下，此时副边反馈电压$V_{FB}$等于1.69V，位于谷值锁定稳定区域，谐振谷值被锁定在第二个谷底处。当负载发生变化后，$V_{FB}$迅速增大超过$V_{FBRVS2CRM}$，电路切换为CRM模式，输出电压下冲变化量约为274mV，经过5ms后输出电压恢复稳定，电路响应速度良好。
+图~\ref{fig:模式切换仿真波形图}是非对称半桥反激式变换器恒压控制模式下的模式切换仿真波形图。在图~\ref{fig:2.5A-5A仿真图}中显示了负载电流从2.5A跳变为5A的具体过程，可以观察到在2.5A的负载电流下，电路工作在RVS工作模式下，此时副边反馈电压$V_{FB}$等于1.69V，位于谷值锁定稳定区域，谐振谷值被锁定在第二个谷底处。当负载发生变化后，$V_{FB}$迅速增大超过$V_{FBRVS2CRM}$，电路切换为CRM模式，输出电压下冲变化量约为274mV，经过5ms后输出电压恢复稳定，电路响应速度良好。图~\ref{fig:5A-2A仿真图}中显示了负载电流从5A跳变为2A的具体过程，当与图~\ref{fig:2.5A-5A仿真图}中相同，当$V_{FB}$减小至低于$V_{FBCRM2RVS}$后，信号HR翻转为低电平，电路切换为RVS模式。电路在模式切换过程中未发生RVS和CRM模式的频繁切换问题，工作正常，符合电路设计。
 
 \subsubsection{负载调整率和线性调整率仿真}
 
@@ -114,9 +122,9 @@
     \label{eq:负载调整率}
     Load Regulation = \frac{V_{max} - V_{min}}{V_{nom}} \times 100\%
 \end{equation}
-其中，$V_{max}$是负载电流最大时的最大输出电压值，$V_{min}$是负载电流最小时的最小输出电压值，$V_{nom}$是额定输出电压值。
+其中，$V_{max}$和$V_{min}$分别是负载电流变化时的最大输出电压值和最小输出电压值，$V_{nom}$是半载时的输出电压值。
 
-图~\ref{fig:负载调整率仿真波形图}是系统的负载调整率仿真波形图。为了仿真测试需要，负载使用理想分段电流源vpwl代替电阻负载，系统在输入电压400V，额定输出电压5V的工况下，负载电流从0.5A依次变化为1.5A、2.5A和5A，对应的实际输出电压分别为5.013V、4.978V、4.999V和4.974V。根据式~\ref{eq:负载调整率}计算可得，负载调整率为0.8\%。
+图~\ref{fig:负载调整率仿真波形图}是系统的负载调整率仿真波形图。为了仿真测试需要，负载使用理想分段电流源代替电阻负载，系统在输入电压220V，额定输出电压5V的工况下，负载电流从0.5A依次变化为1.5A、2.5A和5A，对应的实际输出电压分别为5.013V、4.998V、4.999V和4.974V。根据式~\ref{eq:负载调整率}计算可得，负载调整率为0.8\%。
 
 \begin{figure}[htbp] 
     \centering
@@ -127,10 +135,12 @@
 
 线性调整率反映了输入电压对输出电压的影响，调整率表达式分别为：
 \begin{equation}
-    \label{eq:负载调整率}
+    \label{eq:线性调整率}
     Line Regulation = \frac{V_{oh} - V_{ol}}{V_{nor}} \times 100\%
 \end{equation}
-其中，$V_{oh}$和$V_{ol}$是不同输入交流电压下的输出电压的最大和最小值，$V_{nor}$是额定输入下 的满载输出电压值。
+其中，$V_{oh}$和$V_{ol}$是不同输入交流电压下的输出电压的最大和最小值，$V_{nor}$是额定输入电压下的输出电压值。
+
+在输入交流电压分别为90V、115V、220V和265V的条件下，分别对额定输出电压为5V的电路进行负载电流为5A、2.5A、0.5A时的仿真，并根据式\eqref{eq:负载调整率}和式\eqref{eq:线性调整率}进行计算。表\ref{tab:regulation}展示了负载和输入电压变化下系统的线性调整率和负载调整率，可以见得系统的最大线性调整率为±0.62\%，最大负载调整率为±0.8\%，均满足变换器芯片的设计要求。
 
 \begin{table}[htbp]
 \centering
@@ -138,21 +148,21 @@
 \label{tab:regulation}
 \begin{tabular}{cccccc}
 \toprule
-交流输入电压 & \multicolumn{3}{c}{输出电压 Vout(V)} & 负载调制率 \\
-\cmidrule(lr){2-4}
-Vin(V) & Iout=5A & Iout=2.5A & Iout=0.5A  \\
+%交流输入电压 & \multicolumn{3}{c}{输出电压 Vout(V)}  \\
+%\cmidrule(lr){2-4}
+交流输入电压 & Iout=5A & Iout=2.5A & Iout=0.5A & 负载调制率 \\
 \midrule
-90  & 20.051 & 20.082 & 20.152 & 0.45\% \\
-115 & 20.013 & 20.034 & 20.086 & 0.78\% \\
-220 & 20.011 & 20.016 & 20.024& 1.08\% \\
-265 & 19.981 & 19.994 & 20.007 & 1.00\% \\
+90V  & 4.961 & 4.975 & 4.993 & 0.64\% \\
+115V & 4.968 & 4.987 & 5.008 & 0.8\% \\
+220V & 4.974 & 4.999 & 5.013 & 0.78\% \\
+265V & 4.989 & 5.006 & 5.017 & 0.59\% \\
 \midrule
-线性调制率 & 0.81\%  & 0.72\% & 0.26\% \\
+线性调制率 & 0.56\%  & 0.62\% & 0.48\% \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-表\ref{tab:设计指标与仿真结果对比表}为本文芯片的设计指标和仿真结果对比。由表可见，芯片的仿真结果均满足设计指标要求，满足设计要求。
+表\ref{tab:设计指标与仿真结果对比表}为本文芯片的设计指标和仿真结果对比表。由表可见，芯片的仿真结果均满足设计指标要求，满足设计要求。
 
 \begin{table}[htbp]
     \caption{设计指标与仿真结果对比表}
@@ -167,11 +177,10 @@ Vin(V) & Iout=5A & Iout=2.5A & Iout=0.5A  \\
         \midrule
         输入交流电压 & 90-265V   & 90-265V                      \\  
         交流电压频率 & 50Hz      & 50Hz                         \\   
-        输出规格     & 20V/5A    & 20V/5A                       \\ 
         输出电压纹波 &  50mV     & 47.4mV                        \\
-        输出精度     & ±2\%      & ±0.74\%                         \\  
-        负载调整率   & ±2\%      & ±0.8\%                          \\  
-        线性调整率   & ±2\%      & ±1.12\%                          \\ 
+        输出精度     & ±1.5\%      & ±0.34\%                         \\  
+        负载调整率   & ±1.5\%      & ±0.8\%                          \\  
+        线性调整率   & ±1.5\%      & ±0.62\%                          \\ 
         最大效率     & 90\%      & 91\%                          \\  
         静态功耗     & 100mW     &  86mW                         \\
         \bottomrule
@@ -308,7 +317,7 @@ Vin(V) & Iout=5A & Iout=2.5A & Iout=0.5A  \\
 
 \section{小结}
 
-本章介绍变换器芯片的版图设计，首先针对版图设计过程中需要考虑的多种非理想效应进行了阐述，接着介绍了芯片多个电路模块的版图布局并对具体的几个模块的版图进行了分析，最后展示了整体电路的版图，完成芯片的版图设计。
+本章首先对芯片进行了系统整体电路的启动、恒流模式和恒压模式的仿真验证并给出分析结果。然后介绍变换器芯片的版图设计，针对版图设计过程中需要考虑的多种非理想效应进行了阐述，接着介绍了芯片中带隙基准的版图设计要点，最后展示了整体电路的版图，完成了芯片的版图设计。最后展示了芯片根据版图提取寄生参数后进行的后仿真结果。
 
 
 
