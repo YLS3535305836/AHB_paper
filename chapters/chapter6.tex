@@ -114,8 +114,8 @@
 \begin{figure}[htbp] 
     \centering
     \setlength{\belowcaptionskip}{5pt}
-    \subcaptionbox{2.5A $\sim$ 5A\label{fig:2.5A-5A仿真图}}{\includegraphics[width = 0.45\linewidth]{figures/2.5A_5A.png}}
-	\subcaptionbox{5A $\sim$ 2A \label{fig:5A-2A仿真图}}{\includegraphics[width = 0.455\linewidth]{figures/5A_ 2A.png}} 
+    \subcaptionbox{2.5A $\sim$ 5A\label{fig:2.5A-5A仿真图}}{\includegraphics[width = 0.485\linewidth]{figures/2.5A_5A.png}}
+	\subcaptionbox{5A $\sim$ 2A \label{fig:5A-2A仿真图}}{\includegraphics[width = 0.49\linewidth]{figures/5A_ 2A.png}} 
     \caption{模式切换仿真波形图}
     \label{fig:模式切换仿真波形图}
 \end{figure}
@@ -205,6 +205,7 @@
 %
 %• 恒压下负载跳变的仿真
 
+\subsection{仿真结果对比分析}
 
 
 \section{芯片版图设计}
@@ -260,7 +261,7 @@
 
 \begin{figure}[htbp] 
     \centering
-    \includegraphics[width=0.5\linewidth]{figures/BG_LAYOUT.png}
+    \includegraphics[width=0.45\linewidth]{figures/BG_LAYOUT.png}
     \caption{带隙基准电路版图}
     \label{fig:带隙基准电路版图}
 \end{figure} 
@@ -317,7 +318,20 @@
     \label{fig:后仿真}
 \end{figure} 
 
-精确谷底导通模块的后仿真结果如图\ref{fig:后仿真1}所示，相比于图\ref{fig:谷底导通放大仿真图}中结果，栅压$V_{GS}$稳定在1.58V，$V_{HB}$在导通时刻和谷底位置的最小压差为564mV，信号$D\_Pluse$和$L\_Pluse$的最小误差时间为15ns，相比前仿随略有降低，仍大幅降低功率管开关损耗。
+电源模块中带隙基准电路的后仿真结果如图\ref{fig:带隙基准后仿真}所示。  
+
+\begin{figure}[htbp] 
+    \centering
+    \includegraphics[width=0.8\linewidth]{figures/bandgap_houfang.png}
+    \caption{带隙基准电路后仿真波形图}
+    \label{fig:带隙基准后仿真}
+\end{figure} 
+
+电路在全温度范围内最高电压值为 1.237V，最低电压值为 1.236V，相差1.07mV，温漂系数约等于5.1ppm/℃。相比于图\ref{fig:带隙基准电路仿真波形图}中的前仿结果，后仿真引入的寄生电阻电容导致基准电压产生一定的偏移，同时电流镜和电阻网络的失配使得温漂系数相应变大，但变化程度在接受范围内，符合电路设计。
+
+
+精确谷底导通模块的后仿真结果如图\ref{fig:后仿真1}所示。
+由于后仿真引的寄生电阻电容同样对压控高通滤波器电路产生影响，同时其他电路结构指标也有所降低，和图\ref{fig:谷底导通放大仿真图}中的前仿结果相比，栅压$V_{GS}$稳定在1.58V，$V_{HB}$在导通时刻和谷底位置的最小压差为564mV，信号$D\_Pluse$和$L\_Pluse$的最小误差时间为15ns，略有降低，仍大幅降低功率管开关损耗。
 
 \begin{figure}[htbp] 
     \centering
@@ -325,6 +339,7 @@
     \caption{精确谷底导通模块后仿真波形图}
     \label{fig:后仿真1}
 \end{figure} 
+
 
 \section{小结}
 
